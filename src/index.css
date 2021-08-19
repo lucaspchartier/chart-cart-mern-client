@@ -12,3 +12,8 @@ h1 {
   font-size: 400%;
   color: rgb(0, 0, 255);
 }
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+}
