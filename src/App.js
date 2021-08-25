@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 import PostList from "./components/PostList";
 
 const client = new ApolloClient({
