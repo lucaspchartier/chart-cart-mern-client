@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ApolloClient from "apollo-boost";
 import PostList from "./components/PostList";
 
 class App extends Component {
