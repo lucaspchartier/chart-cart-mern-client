@@ -15,7 +15,6 @@ const getPostsQuery = gql`
 
 class PostList extends Component {
   render() {
-    console.log(this.props);
     return (
       <div>
         <ul>
