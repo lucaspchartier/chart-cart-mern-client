@@ -25,4 +25,4 @@ class PostList extends Component {
   }
 }
 
-export default PostList;
+export default graphql(getPostsQuery)(PostList);
