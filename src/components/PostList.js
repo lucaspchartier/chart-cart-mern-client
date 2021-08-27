@@ -14,7 +14,7 @@ const getPostsQuery = gql`
 `;
 
 class PostList extends Component {
-  dispayPosts() {
+  displayPosts() {
     const data = this.props.data;
     if (data.loading) {
       return (<div>Loading...</div>);
@@ -31,7 +31,7 @@ class PostList extends Component {
     return (
       <div>
         <ul id="post-list">
-          <li>Post</li>
+          {<li>Post</li>}
         </ul>
       </div>
     );
