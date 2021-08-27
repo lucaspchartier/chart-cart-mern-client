@@ -19,11 +19,7 @@ class PostList extends Component {
     if (data.loading) {
       return (<div>Loading...</div>);
     } else {
-      return data.posts.map(post => {
-        return (
-          <div>{post.text}</div>
-        )
-      })
+      return data.posts.map(post => <div key={post.id}>{post.text}</div>)
     }
   };
 
