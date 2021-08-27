@@ -17,9 +17,15 @@ class PostList extends Component {
   dispayPosts() {
     const data = this.props.data;
     if (data.loading) {
-      return (<div>Loading...</div>)
+      return (<div>Loading...</div>);
+    } else {
+      return data.posts.map(post => {
+        return (
+          <li>{post.text}</li>
+        )
+      })
     }
-  }
+  };
 
   render() {
     return (
