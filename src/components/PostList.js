@@ -16,12 +16,19 @@ const getPostsQuery = gql`
 `;
 
 class PostList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: null
+    }
+  }
+
   displayPosts() {
     const data = this.props.data;
     if (data.loading) {
       return (<div>Loading...</div>);
     } else {
-      return data.posts.map(post => <div key={post.id}>{post.text}</div>)
+      return data.posts.map(post => <div key={post.id}>{post.text}</div>);
     }
   };
 
