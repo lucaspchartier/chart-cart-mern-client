@@ -5,8 +5,10 @@ import { graphql } from "react-apollo";
 const getPostsQuery = gql`
   {
     posts {
+      id
       text
       comments {
+        id
         text
       }
     }
