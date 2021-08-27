@@ -21,7 +21,7 @@ class PostList extends Component {
     } else {
       return data.posts.map(post => {
         return (
-          <li>{post.text}</li>
+          <div>{post.text}</div>
         )
       })
     }
