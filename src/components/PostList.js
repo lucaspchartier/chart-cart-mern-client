@@ -16,6 +16,9 @@ const getPostsQuery = gql`
 class PostList extends Component {
   dispayPosts() {
     const data = this.props.data;
+    if (data.loading) {
+      return (<div>Loading...</div>)
+    }
   }
 
   render() {
