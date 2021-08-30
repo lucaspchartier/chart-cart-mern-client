@@ -8,3 +8,5 @@ const getPostsQuery = gql`
         }
     }
 `
+
+export { getPostsQuery };
