@@ -9,4 +9,13 @@ const getPostsQuery = gql`
     }
 `
 
+const getCommentsQuery = gql`
+    {
+        comments {
+            id
+            text
+        }
+    }
+`
+
 export { getPostsQuery };
