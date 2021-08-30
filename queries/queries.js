@@ -18,4 +18,4 @@ const getCommentsQuery = gql`
     }
 `
 
-export { getPostsQuery };
+export { getPostsQuery, getCommentsQuery };
