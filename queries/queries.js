@@ -27,4 +27,21 @@ const addCommentMutation = gql`
     }
 `
 
-export { getPostsQuery, getCommentsQuery };
+const getCommentQuery = gql`
+    query($id: ID) {
+        comment(id: $id) {
+            id
+            text
+            post {
+                id
+                text
+                comments {
+                    id
+                    text
+                }
+            }
+        }
+    }
+`
+
+export { getPostsQuery, getCommentsQuery, addCommentMutation };
