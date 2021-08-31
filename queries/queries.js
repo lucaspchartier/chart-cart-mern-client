@@ -18,4 +18,13 @@ const getCommentsQuery = gql`
     }
 `
 
+const addCommentMutation = gql`
+    mutation($text: String!, $postId: ID!) {
+        addComment(text: $text, postId: $postId) {
+            id
+            text
+        }
+    }
+`
+
 export { getPostsQuery, getCommentsQuery };
