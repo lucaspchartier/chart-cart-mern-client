@@ -15,6 +15,10 @@ class AddComment extends Component {
         const data = this.props.getPostsQuery;
         if (data.loading) {
             return (<option>Loading Posts...</option>)
+        } else {
+            return data.posts.map(post => {
+                return (<option key={post.id} value={post.id}>{post.text}</option>)
+            });
         }
     }
 }
