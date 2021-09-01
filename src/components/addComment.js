@@ -10,4 +10,11 @@ class AddComment extends Component {
             text: ""
         }
     }
+
+    displayPosts() {
+        const data = this.props.getPostsQuery;
+        if (data.loading) {
+            return (<option>Loading Posts...</option>)
+        }
+    }
 }
