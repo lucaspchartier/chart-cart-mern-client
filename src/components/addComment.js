@@ -32,4 +32,12 @@ class AddComment extends Component {
             refetchQueries: [{ query: getCommentsQuery }]
         });
     }
+
+    render() {
+        return (
+            <form id="add-comment">
+                
+            </form>
+        );
+    }
 }
