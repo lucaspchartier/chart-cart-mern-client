@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import { getPostsQuery } from "../../queries/queries";
+import { getPostsQuery, addCommentMutation } from "../../queries/queries";
 
 class AddComment extends Component {
     constructor(props) {
