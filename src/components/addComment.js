@@ -24,5 +24,12 @@ class AddComment extends Component {
 
     submitForm(e) {
         e.preventDefault();
+        this.props.addCommentMutation({
+            variables: {
+                postId: this.state.postId,
+                text: this.state.text
+            },
+            refetchQueries: [{ query: getCommentsQuery }]
+        });
     }
 }
