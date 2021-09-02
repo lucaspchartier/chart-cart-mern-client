@@ -21,4 +21,8 @@ class AddComment extends Component {
             });
         }
     }
+
+    submitForm(e) {
+        e.preventDefault();
+    }
 }
