@@ -42,3 +42,8 @@ class AddComment extends Component {
         );
     }
 }
+
+export default flowright(
+    graphql(getPostsQuery, { name: "getPostsQuery" }),
+    graphql(addCommentMutation, { name: "addCommentMutation" })
+)(AddComment);
