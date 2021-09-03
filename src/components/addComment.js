@@ -38,8 +38,10 @@ class AddComment extends Component {
         return (
             <form id="add-comment" onSubmit={ this.submitForm.bind(this) }>
                 <div className="field">
-                    <input type=""/>
+                    <input type="text" onChange={ e => this.setState({ postId: e.target.value }) }/>
                 </div>
+
+                <button>+</button>
             </form>
         );
     }
