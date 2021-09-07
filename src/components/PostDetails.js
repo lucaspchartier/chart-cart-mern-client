@@ -11,6 +11,8 @@ class PostDetails extends Component {
                     <h2>{post.comment.text}</h2>
                 </div>
             )
+        } else {
+            <div>No post selected.</div>
         }
     }
 }
