@@ -15,4 +15,12 @@ class PostDetails extends Component {
             <div>No post selected.</div>
         }
     }
+
+    render() {
+        return (
+            <div id="post-detail">
+                {this.displayPostDetails()}
+            </div>
+        );
+    }
 }
