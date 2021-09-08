@@ -57,4 +57,4 @@ const addCommentMutation = gql`
     }
 `
 
-export { getPostsQuery, getCommentsQuery, addCommentMutation, getCommentQuery };
+export { getPostsQuery, getCommentsQuery, getPostQuery, getCommentQuery, addCommentMutation };
