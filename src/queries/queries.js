@@ -18,6 +18,19 @@ const getCommentsQuery = gql`
     }
 `
 
+const getPostQuery = gql`
+    query($id: ID) {
+        post(id: $id) {
+            id
+            text
+            comments {
+                id
+                text
+            }
+        }
+    }
+`
+
 const getCommentQuery = gql`
     query($id: ID) {
         comment(id: $id) {
