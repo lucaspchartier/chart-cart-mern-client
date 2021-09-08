@@ -18,15 +18,6 @@ const getCommentsQuery = gql`
     }
 `
 
-const addCommentMutation = gql`
-    mutation($text: String!, $postId: ID!) {
-        addComment(text: $text, postId: $postId) {
-            id
-            text
-        }
-    }
-`
-
 const getCommentQuery = gql`
     query($id: ID) {
         comment(id: $id) {
@@ -40,6 +31,15 @@ const getCommentQuery = gql`
                     text
                 }
             }
+        }
+    }
+`
+
+const addCommentMutation = gql`
+    mutation($text: String!, $postId: ID!) {
+        addComment(text: $text, postId: $postId) {
+            id
+            text
         }
     }
 `
