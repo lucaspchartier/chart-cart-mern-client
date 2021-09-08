@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
+import { getPostQuery } from "../queries/queries";
 
 class PostDetails extends Component {
     displayPostDetails() {
