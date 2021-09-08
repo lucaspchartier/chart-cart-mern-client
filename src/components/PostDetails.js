@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { graphql } from "react-apollo";
 
 class PostDetails extends Component {
-    displayBookDetails() {
+    displayPostDetails() {
         const { post } = this.props.data;
         if (post) {
             return (
