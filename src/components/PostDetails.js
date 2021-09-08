@@ -25,3 +25,13 @@ class PostDetails extends Component {
         );
     }
 }
+
+export default graphql(getPostQuery, {
+    options: props => {
+        return {
+            variables: {
+                id: props.postId
+            }
+        }
+    }
+})(PostDetails);
