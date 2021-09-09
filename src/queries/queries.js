@@ -48,6 +48,15 @@ const getCommentQuery = gql`
     }
 `
 
+const addPostMutation = gql`
+    mutation($text: String!) {
+        addPost(text: $text) {
+            id
+            text
+        }
+    }
+`
+
 const addCommentMutation = gql`
     mutation($text: String!, $postId: ID!) {
         addComment(text: $text, postId: $postId) {
@@ -57,4 +66,4 @@ const addCommentMutation = gql`
     }
 `
 
-export { getPostsQuery, getCommentsQuery, getPostQuery, getCommentQuery, addCommentMutation };
+export { getPostsQuery, getCommentsQuery, getPostQuery, getCommentQuery, addPostMutation, addCommentMutation };
