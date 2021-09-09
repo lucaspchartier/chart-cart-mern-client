@@ -9,4 +9,14 @@ class AddPost extends Component {
             text: ""
         }
     }
+
+    submitForm(e) {
+        e.preventDefault();
+        this.props.addPostMutation({
+            variables: {
+                text: this.state.text
+            },
+            refetchQueries: [{ query: getPostsQuery }]
+        });
+    }
 }
