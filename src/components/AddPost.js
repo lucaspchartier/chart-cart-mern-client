@@ -21,3 +21,8 @@ class AddPost extends Component {
         });
     }
 }
+
+export default flowright(
+    graphql(getPostsQuery, { name: "getPostsQuery" }),
+    graphql(addPostMutation, { name: "addPostMutation" })
+)(AddPost);
