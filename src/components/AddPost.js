@@ -27,6 +27,8 @@ class AddPost extends Component {
                 <div class="field">
                     <input type="text" onChange={ e => this.setState({ text: e.target.value }) }/>
                 </div>
+
+                <button>+</button>
             </form>
         );
     }
