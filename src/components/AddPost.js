@@ -20,6 +20,16 @@ class AddPost extends Component {
             refetchQueries: [{ query: getPostsQuery }]
         });
     }
+
+    render() {
+        return (
+            <form id="add-post" onSubmit={ this.submitForm.bind(this) }>
+                <div class="field">
+                    <input type="text" onChange={ e => this.setState({ text: e.target.value }) }/>
+                </div>
+            </form>
+        );
+    }
 }
 
 export default flowright(
