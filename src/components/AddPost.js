@@ -3,6 +3,8 @@ import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../queries/queries";
 
+import AddComment from "./AddComment";
+
 class AddPost extends Component {
     constructor(props) {
         super(props)
