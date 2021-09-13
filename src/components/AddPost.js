@@ -25,14 +25,16 @@ class AddPost extends Component {
 
     render() {
         return (
-            <form id="add-post" onSubmit={this.submitForm.bind(this)}>
-                <div class="field">
-                    <input type="text" onChange={e => this.setState({ text: e.target.value })} />
-                </div>
+            <>
+                <form id="add-post" onSubmit={this.submitForm.bind(this)}>
+                    <div class="field">
+                        <input type="text" onChange={e => this.setState({ text: e.target.value })} />
+                    </div>
 
-                <button>+</button>
-            </form>
-            <AddComment />
+                    <button>+</button>
+                </form>
+                <AddComment />
+            </>
         );
     }
 }
