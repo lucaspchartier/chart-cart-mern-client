@@ -3,7 +3,7 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
 import PostList from "./components/PostList";
-import AddComment from "./components/AddComment";
+import AddPost from "./components/AddPost";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql",
@@ -16,7 +16,7 @@ class App extends Component {
         <div className="App">
           <h1>Chart Cart</h1>
           <PostList/>
-          <AddComment/>
+          <AddPost/>
         </div>
       </ApolloProvider>
     );
