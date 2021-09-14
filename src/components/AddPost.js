@@ -33,7 +33,7 @@ class AddPost extends Component {
 
                     <button>+</button>
                 </form>
-                <AddComment />
+                <AddComment/>
             </>
         );
     }
