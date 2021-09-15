@@ -16,4 +16,11 @@ class CommentList extends Component {
             selected: null
         }
     }
+
+    displayComments() {
+        const data = this.props.data;
+        if (data.loading) {
+            return (<div>Loading...</div>);
+        }
+    }
 }
