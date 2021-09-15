@@ -21,6 +21,10 @@ class CommentList extends Component {
         const data = this.props.data;
         if (data.loading) {
             return (<div>Loading...</div>);
+        } else {
+            return data.comments.map(comment => {
+                return <div key={comment.id} onClick={e => {this.setState({ selected: comment.id })}}>{comment.text}</div>
+            });
         }
-    }
+    };
 }
