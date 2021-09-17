@@ -36,6 +36,10 @@ class PostList extends Component {
     }
   };
 
+  displayComments() {
+    const data = this.props.data;
+  }
+
   render() {
     return (
       <div>
