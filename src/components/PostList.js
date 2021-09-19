@@ -23,6 +23,8 @@ class PostList extends Component {
     this.state = {
       selected: null
     }
+
+    this.displayPosts = this.displayPosts.bind(this);
   }
 
   displayPosts() {
