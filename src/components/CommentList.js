@@ -1,23 +1,21 @@
 import React, { Component } from "react";
-import { gql } from "apollo-boost";
-import { graphql } from "react-apollo";
+// import { gql } from "apollo-boost";
+// import { graphql } from "react-apollo";
 
-const getCommentsQuery = gql`
-    comments {
-        id
-        text
-    }
-`
+// const getCommentsQuery = gql`
+//     comments {
+//         id
+//         text
+//     }
+// `
 
 class CommentList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selected: null
-        }
+    constructor() {
+        super();
     }
 
     displayComments() {
+        console.log(this);
         const data = this.props.data;
         if (data.loading) {
             return (<div>Loading...</div>);
@@ -37,4 +35,4 @@ class CommentList extends Component {
     }
 }
 
-export default graphql(getCommentsQuery)(CommentList);
+export default CommentList;
