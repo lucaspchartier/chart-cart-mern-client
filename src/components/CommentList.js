@@ -10,26 +10,10 @@ import React, { Component } from "react";
 // `
 
 class CommentList extends Component {
-    constructor() {
-        super();
-    }
-
-    displayComments() {
-        console.log(this);
-        const data = this.props.data;
-        if (data.loading) {
-            return (<div>Loading...</div>);
-        } else {
-            return data.comments.map(comment => {
-                return <div key={comment.id} onClick={e => {this.setState({ selected: comment.id })}}>{comment.text}</div>
-            });
-        }
-    };
-
     render() {
         return (
             <div>
-                {this.displayComments()}
+                
             </div>
         );
     }
