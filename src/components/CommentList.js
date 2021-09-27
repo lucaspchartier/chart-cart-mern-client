@@ -10,10 +10,14 @@ import React, { Component } from "react";
 // `
 
 class CommentList extends Component {
+    displayComments() {
+        
+    }
+
     render() {
         return (
             <div>
-                
+                {this.displayComments()}
             </div>
         );
     }
