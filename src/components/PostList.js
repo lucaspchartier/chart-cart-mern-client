@@ -21,7 +21,8 @@ class PostList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: null
+      selected: null,
+      comments: []
     }
 
     this.displayPosts = this.displayPosts.bind(this);
