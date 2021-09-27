@@ -40,7 +40,7 @@ class PostList extends Component {
   };
 
   render() {
-    console.log(this.props.data.posts);
+    // console.log(this.props.data.posts);
     return (
       <div>
         {this.displayPosts()}
