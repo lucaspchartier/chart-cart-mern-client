@@ -34,13 +34,15 @@ class PostList extends Component {
       return (<div>Loading...</div>);
     } else {
       return data.posts.map(post => {
-        return <div key={post.id} onClick={e => {this.setState({ selected: post.id })}}>{post.text}</div>
+        return <div key={post.id} onClick={e => {this.setState({
+          selected: post.id,
+          comments: post.comments
+        })}}>{post.text}</div>
       });
     }
   };
 
   render() {
-    // console.log(this.props.data.posts);
     return (
       <div>
         {this.displayPosts()}
