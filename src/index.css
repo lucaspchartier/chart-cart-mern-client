@@ -15,6 +15,10 @@ h1 {
   color: rgb(13, 13, 222);
 }
 
+.comments {
+  font-size: 100%;
+}
+
 /*
 .App {
   display: flex;
