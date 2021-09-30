@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
+import AddPost from "./AddPost";
 import CommentList from "./CommentList";
 
 const getPostsQuery = gql`
@@ -47,6 +48,7 @@ class PostList extends Component {
       <div>
         {this.displayPosts()}
         <CommentList comments={this.state.comments}/>
+        <AddPost/>
       </div>
     );
   }
