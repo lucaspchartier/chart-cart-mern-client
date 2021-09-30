@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // import { gql } from "apollo-boost";
 // import { graphql } from "react-apollo";
 
+import AddComment from "./AddComment";
+
 // const getCommentsQuery = gql`
 //     comments {
 //         id
@@ -21,6 +23,7 @@ class CommentList extends Component {
         return (
             <div>
                 {this.displayComments()}
+                <AddComment/>
             </div>
         );
     }
