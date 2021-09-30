@@ -14,7 +14,7 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="App">
           <h1>Chart Cart</h1>
-          <PostList/>
+          <h2 className="posts"><PostList/></h2>
         </div>
       </ApolloProvider>
     );
