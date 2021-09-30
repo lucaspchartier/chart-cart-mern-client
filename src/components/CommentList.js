@@ -11,8 +11,8 @@ import React, { Component } from "react";
 
 class CommentList extends Component {
     displayComments() {
-        const comments = this.props;
-        console.log(comments);
+        const comments = this.props.comments;
+        
     }
 
     render() {
