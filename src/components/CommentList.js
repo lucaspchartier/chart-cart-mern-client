@@ -12,7 +12,9 @@ import React, { Component } from "react";
 class CommentList extends Component {
     displayComments() {
         const comments = this.props.comments;
-        
+        return comments.map(comment => {
+            return <div key={comment.id}>{comment.text}</div>
+        });
     }
 
     render() {
