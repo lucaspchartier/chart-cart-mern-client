@@ -15,11 +15,11 @@ h1 {
   color: rgb(13, 13, 222);
 }
 
-.posts {
+#posts {
   font-size: 200%;
 }
 
-.comments {
+#comments {
   font-size: 100%;
 }
 
