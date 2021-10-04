@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import { graphql } from "react-apollo";
 
 import AddComment from "./AddComment";
+import './CommentList.css';
 
 // const getCommentsQuery = gql`
 //     comments {
