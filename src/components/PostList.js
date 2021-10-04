@@ -48,7 +48,7 @@ class PostList extends Component {
     return (
       <div id="posts">
         {this.displayPosts()}
-        <h3><CommentList comments={this.state.comments}/></h3>
+        <CommentList comments={this.state.comments}/>
         <AddPost/>
       </div>
     );
