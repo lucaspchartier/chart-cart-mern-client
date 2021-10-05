@@ -24,7 +24,7 @@ class CommentList extends Component {
 
     render() {
         return (
-            <div id="comments">
+            <div className="comment-list">
                 {this.displayComments()}
                 <AddComment/>
             </div>
