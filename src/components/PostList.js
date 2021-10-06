@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
+import AddPost from "./AddPost";
+import CommentList from "./CommentList";
+import './PostList.css';
+
 const getPostsQuery = gql`
   {
     posts {
@@ -19,8 +23,11 @@ class PostList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: null
+      selected: null,
+      comments: []
     }
+
+    this.displayPosts = this.displayPosts.bind(this);
   }
 
   displayPosts() {
@@ -29,15 +36,20 @@ class PostList extends Component {
       return (<div>Loading...</div>);
     } else {
       return data.posts.map(post => {
-        return <div key={post.id} onClick={e => {this.setState({ selected: post.id })}}>{post.text}</div>
+        return <div key={post.id} onClick={e => {this.setState({
+          selected: post.id,
+          comments: post.comments
+        })}}>{post.text}</div>
       });
     }
   };
 
   render() {
     return (
-      <div>
+      <div className="post-list">
         {this.displayPosts()}
+        <CommentList comments={this.state.comments}/>
+        <AddPost/>
       </div>
     );
   }
