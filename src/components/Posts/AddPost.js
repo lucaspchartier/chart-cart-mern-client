@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
-import { getPostsQuery, addPostMutation } from "../queries/queries";
+import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
 class AddPost extends Component {
     constructor(props) {
