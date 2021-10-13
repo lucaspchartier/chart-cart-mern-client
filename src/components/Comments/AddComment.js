@@ -38,7 +38,13 @@ class AddComment extends Component {
         return (
             <form id="add-comment" onSubmit={ this.submitForm.bind(this) }>
                 <div className="field">
-                    <input type="text" onChange={ e => this.setState({ postId: e.target.value }) }/>
+                    <input type="text" onChange={ e => this.setState({ text: e.target.value }) }/>
+                </div>
+
+                <div className="field">
+                    <select onChange={ e => this.setState({ postId: e.target.value }) }>
+                        {this.displayPosts()}
+                    </select>
                 </div>
 
                 <button>+</button>
