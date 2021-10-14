@@ -25,4 +25,4 @@ class CommentList extends Component {
     }
 }
 
-export default graphql(getCommentsQuery)(CommentList);
+export default CommentList;
