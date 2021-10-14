@@ -5,6 +5,15 @@ import { graphql } from "react-apollo";
 import AddComment from "./AddComment";
 import './CommentList.css';
 
+const getCommentsQuery = gql`
+  {
+    comments {
+      id
+      text
+    }
+  }
+`;
+
 class CommentList extends Component {
     displayComments() {
         const comments = this.props.comments;
