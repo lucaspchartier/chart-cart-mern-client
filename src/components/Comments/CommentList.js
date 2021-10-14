@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { gql } from "apollo-boost";
+import { graphql } from "react-apollo";
 
 import AddComment from "./AddComment";
 import './CommentList.css';
