@@ -4,6 +4,13 @@ import AddComment from "./AddComment";
 import './CommentList.css';
 
 class CommentList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          postId: null
+        }
+    }
+
     displayComments() {
         const comments = this.props.comments;
         return comments.map(comment => {
