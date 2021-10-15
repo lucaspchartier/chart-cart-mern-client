@@ -24,7 +24,6 @@ class PostList extends Component {
     super(props);
     this.state = {
       selected: null,
-      id: null,
       comments: []
     }
 
