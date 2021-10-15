@@ -13,10 +13,16 @@ class CommentList extends Component {
         });
     }
 
+    bindCommentToPost() {
+        const postId = this.props.selected;
+        console.log(postId);
+    }
+
     render() {
         return (
             <div className="comment-list">
                 {this.displayComments()}
+                {this.bindCommentToPost()}
                 <AddComment/>
             </div>
         );
