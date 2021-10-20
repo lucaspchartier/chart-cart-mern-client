@@ -24,7 +24,7 @@ class CommentList extends Component {
         return (
             <div className="comment-list">
                 {this.displayComments()}
-                <AddComment/>
+                <AddComment postId={this.state.postId}/>
             </div>
         );
     }
