@@ -18,8 +18,6 @@ class CommentList extends Component {
                 <li id="comment">{comment.text}</li>
             </ul>
         });
-
-        console.log(this.state.postId);
     }
 
     render() {
