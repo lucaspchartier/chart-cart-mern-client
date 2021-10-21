@@ -9,6 +9,8 @@ class CommentList extends Component {
         this.state = {
           postId: null
         }
+
+        this.displayComments = this.displayComments.bind(this);
     }
 
     displayComments() {
