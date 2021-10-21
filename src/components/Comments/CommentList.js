@@ -14,7 +14,7 @@ class CommentList extends Component {
     displayComments() {
         const comments = this.props.comments;
         return comments.map(comment => {
-            return <ul key={comment.id} onClick={e => {this.setState({ postId: this.props.selected })}}>
+            return <ul key={comment.id}>
                 <li id="comment">{comment.text}</li>
             </ul>
         });
