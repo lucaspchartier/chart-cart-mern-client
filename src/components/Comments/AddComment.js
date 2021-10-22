@@ -24,6 +24,10 @@ class AddComment extends Component {
         }
     }
 
+    bindCommentToPost(id) {
+        
+    }
+
     submitForm(e) {
         e.preventDefault();
         this.props.addCommentMutation({
