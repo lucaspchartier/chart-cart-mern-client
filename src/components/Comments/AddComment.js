@@ -13,6 +13,7 @@ class AddComment extends Component {
     }
 
     displayPosts() {
+        console.log(this.props.postId);
         const data = this.props.getPostsQuery;
         if (data.loading) {
             return (<option>Loading Posts...</option>)
