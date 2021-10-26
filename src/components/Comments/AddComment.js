@@ -24,7 +24,7 @@ class AddComment extends Component {
     }
 
     bindCommentToPost(id) {
-
+        
     }
 
     submitForm(e) {
@@ -46,8 +46,9 @@ class AddComment extends Component {
                 </div>
 
                 <div className="field">
-                    <input type="text" onChange={ e => this.bindCommentToPost(this.props.postId) }/>
+                    <select onChange={ e => this.bindCommentToPost(this.props.postId) }>
                         {this.displayPosts()}
+                    </select>
                 </div>
 
                 <button>+</button>
