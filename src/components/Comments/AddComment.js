@@ -25,8 +25,7 @@ class AddComment extends Component {
 
     bindCommentToPost(postId) {
         const posts = this.props.getPostsQuery.posts;
-        const filteredPosts = posts.filter(post => post.id === postId);
-        console.log(filteredPosts);
+        return posts.filter(post => post.id === postId);
     }
 
     submitForm(e) {
