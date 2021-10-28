@@ -47,8 +47,8 @@ class AddComment extends Component {
                         this.setState({ text: e.target.value })
                         this.bindCommentToPost(this.props.postId)
                     }}/>
+                    {this.displayPosts()}
                 </div>
-                {this.displayPosts()}
 
                 <button>+</button>
             </form>
