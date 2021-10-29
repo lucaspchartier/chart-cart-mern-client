@@ -46,8 +46,8 @@ class AddComment extends Component {
                     <input type="text" onChange={ e => {
                         this.setState({ text: e.target.value })
                         this.bindCommentToPost(this.setState({ postId: this.props.postId }))
+                        this.displayPosts()
                     }}/>
-                    {this.displayPosts()}
                 </div>
 
                 <button>+</button>
