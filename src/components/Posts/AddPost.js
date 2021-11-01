@@ -19,7 +19,6 @@ class AddPost extends Component {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
-        this.setState({ text: "" })
     }
 
     render() {
