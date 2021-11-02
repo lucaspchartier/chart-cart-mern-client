@@ -21,10 +21,10 @@ class AddPost extends Component {
         });
     }
 
-    handleReset() {
-        document.querySelectorAll("input");
-        this.setState({ text: "" })
-    }
+    // handleReset() {
+    //     document.querySelectorAll("input");
+    //     this.setState({ text: "" })
+    // }
 
     render() {
         return (
