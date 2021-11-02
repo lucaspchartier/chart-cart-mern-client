@@ -34,7 +34,7 @@ class AddPost extends Component {
                     <input
                         type="text"
                         placeholder="text"
-                        onChange={e => this.setState({ text: e.target.value })}
+                        ref={e => this.setState({ text: e.target.value })}
                     />
                 </div>
 
