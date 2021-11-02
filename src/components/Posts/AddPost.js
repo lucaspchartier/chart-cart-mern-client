@@ -33,6 +33,7 @@ class AddPost extends Component {
                 <div className="field">
                     <input
                         type="text"
+                        placeholder="text"
                         onChange={e => this.setState({ text: e.target.value })}
                     />
                 </div>
