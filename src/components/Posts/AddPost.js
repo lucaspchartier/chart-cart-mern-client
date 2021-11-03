@@ -22,11 +22,6 @@ class AddPost extends Component {
         e.target.reset();
     }
 
-    // handleReset() {
-    //     document.querySelectorAll("input");
-    //     this.setState({ text: "" })
-    // }
-
     render() {
         return (
             <form id="add-post" onSubmit={this.submitForm.bind(this)}>
