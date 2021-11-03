@@ -32,17 +32,22 @@ class AddComment extends Component {
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
+        e.target.reset();
     }
 
     render() {
         return (
-            <form id="add-comment" onSubmit={ this.submitForm.bind(this) }>
+            <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
                 <div className="field">
-                    <input type="text" onChange={ e => this.setState({ text: e.target.value }) }/>
+                    <input
+                        type="text"
+                        placeholder="text"
+                        onChange={e => this.setState({ text: e.target.value })}
+                    />
                 </div>
 
                 <div className="field">
-                    <select onChange={ e => this.setState({ postId: e.target.value }) }>
+                    <select onChange={e => this.setState({ postId: e.target.value })}>
                         {this.displayPosts()}
                     </select>
                 </div>
