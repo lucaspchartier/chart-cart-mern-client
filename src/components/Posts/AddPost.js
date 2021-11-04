@@ -19,6 +19,7 @@ class AddPost extends Component {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
+        e.target.reset();
     }
 
     render() {
