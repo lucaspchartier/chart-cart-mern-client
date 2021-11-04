@@ -41,7 +41,7 @@ class AddComment extends Component {
                 <div className="field">
                     <input
                         type="text"
-                        placeholder="text"
+                        placeholder="comment"
                         onChange={e => this.setState({ text: e.target.value })}
                     />
                 </div>
