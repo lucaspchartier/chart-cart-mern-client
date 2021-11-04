@@ -46,6 +46,7 @@ class AddComment extends Component {
                 <div className="field">
                     <input 
                         type="text"
+                        placeholder="text"
                         onChange={e => {
                             this.setState({ text: e.target.value })
                             this.bindCommentToPost(this.setState({ postId: this.props.postId }))
