@@ -23,6 +23,11 @@ class AddComment extends Component {
         }
     }
 
+    bindCommentToPost(postId) {
+        const posts = this.props.getPostsQuery.posts;
+        return posts.filter(post => post.id === postId);
+    }
+
     submitForm(e) {
         e.preventDefault();
         this.props.addCommentMutation({
@@ -39,17 +44,15 @@ class AddComment extends Component {
         return (
             <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
                 <div className="field">
-                    <input
+                    <input 
                         type="text"
                         placeholder="comment"
-                        onChange={e => this.setState({ text: e.target.value })}
+                        onChange={e => {
+                            this.setState({ text: e.target.value })
+                            this.bindCommentToPost(this.setState({ postId: this.props.postId }))
+                            this.displayPosts()
+                        }}
                     />
-                </div>
-
-                <div className="field">
-                    <select onChange={e => this.setState({ postId: e.target.value })}>
-                        {this.displayPosts()}
-                    </select>
                 </div>
 
                 <button>+</button>

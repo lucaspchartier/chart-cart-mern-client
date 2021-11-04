@@ -23,7 +23,7 @@ class PostList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: null,
+      selectedPost: null,
       comments: []
     }
 
@@ -37,7 +37,7 @@ class PostList extends Component {
     } else {
       return data.posts.map(post => {
         return <div key={post.id} onClick={e => {this.setState({
-          selected: post.id,
+          selectedPost: post.id,
           comments: post.comments
         })}}>{post.text}</div>
       });
@@ -48,7 +48,7 @@ class PostList extends Component {
     return (
       <div className="post-list">
         {this.displayPosts()}
-        <CommentList comments={this.state.comments}/>
+        <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
         <AddPost/>
       </div>
     );
