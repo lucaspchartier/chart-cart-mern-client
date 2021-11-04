@@ -37,6 +37,7 @@ class AddComment extends Component {
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
+        e.target.reset();
     }
 
     render() {
