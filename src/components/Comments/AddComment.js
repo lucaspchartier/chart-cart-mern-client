@@ -42,7 +42,7 @@ class AddComment extends Component {
 
     render() {
         return (
-            <form id="add-comment" onSubmit={ this.submitForm.bind(this) }>
+            <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
                 <div className="field">
                     <input type="text" onChange={ e => {
                         this.setState({ text: e.target.value })
