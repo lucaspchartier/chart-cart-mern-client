@@ -9,6 +9,8 @@ class AddPost extends Component {
         this.state = {
             text: ""
         }
+
+        this.submitForm = this.submitForm.bind(this);
     }
 
     submitForm(e) {
@@ -23,7 +25,7 @@ class AddPost extends Component {
     }
 
     inputText(e) {
-        
+
     }
 
     render() {
