@@ -22,6 +22,10 @@ class AddPost extends Component {
         e.target.reset();
     }
 
+    inputText(e) {
+        
+    }
+
     render() {
         return (
             <form id="add-post" onSubmit={this.submitForm.bind(this)}>
