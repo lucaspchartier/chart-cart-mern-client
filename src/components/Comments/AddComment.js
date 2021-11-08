@@ -11,7 +11,7 @@ class AddComment extends Component {
             text: ""
         }
 
-        this.displayPosts = this.displayPosts.bind(this);
+        
     }
 
     displayPosts() {
