@@ -10,6 +10,8 @@ class AddComment extends Component {
             postId: "",
             text: ""
         }
+
+        this.displayPosts = this.displayPosts.bind(this);
     }
 
     displayPosts() {
