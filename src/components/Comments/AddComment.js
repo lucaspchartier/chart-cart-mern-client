@@ -11,6 +11,7 @@ class AddComment extends Component {
             text: ""
         }
 
+        this.displayPosts = this.displayPosts.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
 
