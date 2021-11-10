@@ -36,7 +36,7 @@ class PostList extends Component {
       return (<div>Loading...</div>);
     } else {
       return data.posts.map(post => {
-        return <div key={post.id} onChange={e => {this.setState({
+        return <div key={post.id} onClick={e => {this.setState({
           selectedPost: post.id,
           comments: post.comments
         })}}>{post.text}</div>
