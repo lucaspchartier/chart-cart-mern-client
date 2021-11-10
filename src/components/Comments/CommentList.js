@@ -28,7 +28,7 @@ class CommentList extends Component {
 
     render() {
         return (
-            <div className="comment-list">
+            <div className="comment-list" onChange={this.handleChange}>
                 {this.displayComments()}
                 <AddComment postId={this.state.postId}/>
             </div>
