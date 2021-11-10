@@ -14,6 +14,7 @@ class CommentList extends Component {
     }
 
     handleChange(e) {
+        console.log(e);
         this.setState({ postId: this.props.selectedPost });
     }
 
