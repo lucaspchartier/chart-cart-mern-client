@@ -10,6 +10,7 @@ class CommentList extends Component {
           postId: null
         }
 
+        this.handleChange = this.handleChange.bind(this);
         this.displayComments = this.displayComments.bind(this);
     }
 
