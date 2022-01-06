@@ -28,7 +28,7 @@ class AddComment extends Component {
     // }
 
     displayComments() {
-
+  
     }
 
     bindCommentToPost(postId) {
