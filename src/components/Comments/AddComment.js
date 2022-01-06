@@ -11,7 +11,7 @@ class AddComment extends Component {
             text: ""
         }
 
-        this.displayPosts = this.displayPosts.bind(this);
+        // this.displayPosts = this.displayPosts.bind(this);
         this.bindCommentToPost = this.bindCommentToPost.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
@@ -28,7 +28,7 @@ class AddComment extends Component {
     // }
 
     displayComments() {
-        
+
     }
 
     bindCommentToPost(postId) {
