@@ -50,7 +50,7 @@ class PostList extends Component {
       <div className="post-list">
         {this.displayPosts()}
         <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
-        <AddComment/>
+        <AddComment comments={this.state.comments}/>
         <AddPost/>
       </div>
     );
