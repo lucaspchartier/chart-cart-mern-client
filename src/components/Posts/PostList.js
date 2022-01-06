@@ -3,7 +3,6 @@ import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
 import AddPost from "./AddPost";
-import AddComment from "../Comments/AddComment";
 import CommentList from "../Comments/CommentList";
 import './PostList.css';
 
@@ -50,7 +49,6 @@ class PostList extends Component {
       <div className="post-list">
         {this.displayPosts()}
         <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
-        <AddComment comments={this.state.comments}/>
         <AddPost/>
       </div>
     );
