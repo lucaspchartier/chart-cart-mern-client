@@ -16,16 +16,16 @@ class AddComment extends Component {
         this.submitForm = this.submitForm.bind(this);
     }
 
-    displayPosts() {
-        const data = this.props.getPostsQuery;
-        if (data.loading) {
-            return (<option>Loading Posts...</option>)
-        } else {
-            return data.posts.map(post => {
-                return (<option key={post.id} value={post.id}>{post.text}</option>)
-            });
-        }
-    }
+    // displayPosts() {
+    //     const data = this.props.getPostsQuery;
+    //     if (data.loading) {
+    //         return (<option>Loading Posts...</option>)
+    //     } else {
+    //         return data.posts.map(post => {
+    //             return (<option key={post.id} value={post.id}>{post.text}</option>)
+    //         });
+    //     }
+    // }
 
     bindCommentToPost(postId) {
         const posts = this.props.getPostsQuery.posts;
@@ -54,7 +54,7 @@ class AddComment extends Component {
                         onChange={e => {
                             this.setState({ text: e.target.value })
                             this.bindCommentToPost(this.setState({ postId: this.props.postId }))
-                            this.displayPosts()
+                            // this.displayPosts()
                         }}
                     />
                 </div>
