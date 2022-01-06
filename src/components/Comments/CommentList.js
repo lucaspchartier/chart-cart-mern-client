@@ -7,7 +7,8 @@ class CommentList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          postId: null
+          postId: null,
+          comments: []
         }
 
         this.handleChange = this.handleChange.bind(this);
