@@ -28,9 +28,7 @@ class CommentList extends Component {
             return <ul key={comment.id} onClick={e => {this.setState({
                 postId: this.props.selectedPost,
                 comments: this.props.comments
-            })}}>
-                <li id="comment">{comment.text}</li>
-            </ul>
+            })}}><li id="comment">{comment.text}</li></ul>
         });
     }
 
