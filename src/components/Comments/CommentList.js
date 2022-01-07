@@ -11,16 +11,16 @@ class CommentList extends Component {
           comments: []
         }
 
-        this.handleChange = this.handleChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
         this.displayComments = this.displayComments.bind(this);
     }
 
-    handleChange(e) {
-        this.setState({
-            postId: this.props.selectedPost,
-            comments: this.props.comments
-        });
-    }
+    // handleChange(e) {
+    //     this.setState({
+    //         postId: this.props.selectedPost,
+    //         comments: this.props.comments
+    //     });
+    // }
 
     displayComments() {
         const comments = this.props.comments;
@@ -33,7 +33,7 @@ class CommentList extends Component {
 
     render() {
         return (
-            <div className="comment-list" onChange={this.handleChange}>
+            <div className="comment-list" /* onChange={this.handleChange} */ >
                 {this.displayComments()}
                 <AddComment postId={this.state.postId}/>
             </div>
