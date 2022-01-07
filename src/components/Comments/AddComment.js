@@ -28,8 +28,10 @@ class AddComment extends Component {
     // }
 
     displayComments() {
-        const data = this.props;
-        console.log(data);
+        // const data = this.props.comments;
+       if (this.props.addCommentMutationResult.loading) {
+           return (<option>Loading Comments...</option>)
+       }
     }
 
     bindCommentToPost(postId) {
