@@ -31,6 +31,10 @@ class AddComment extends Component {
         const data = this.props;
         if (data.addCommentMutationResult.loading) {
             return (<option>Loading Comments...</option>)
+        } else {
+            return data.comments.map(comment => {
+                return (<option key={comment.id} value={comment.id}>{comment.text}</option>)
+            });
         }
     }
 
