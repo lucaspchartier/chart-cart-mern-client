@@ -5,20 +5,20 @@ import { ApolloProvider } from "react-apollo";
 import PostList from "./components/Posts/PostList";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+    uri: "http://localhost:4000/graphql",
 });
 
 class App extends Component {
-  render() {
-    return (
-      <ApolloProvider client={client}>
-        <div className="App">
-          <h1>Chart Cart</h1>
-          <h2><PostList/></h2>
-        </div>
-      </ApolloProvider>
-    );
-  }
+    render() {
+        return (
+            <ApolloProvider client={client}>
+                <div className="App">
+                    <h1>Chart Cart</h1>
+                    <h2><PostList/></h2>
+                </div>
+            </ApolloProvider>
+        );
+    }
 }
 
 export default App;
