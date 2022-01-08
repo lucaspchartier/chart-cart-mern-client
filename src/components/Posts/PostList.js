@@ -20,15 +20,15 @@ const getPostsQuery = gql`
 `;
 
 class PostList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedPost: null,
-      comments: []
-    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedPost: null,
+            comments: []
+        }
 
-    this.displayPosts = this.displayPosts.bind(this);
-  }
+        this.displayPosts = this.displayPosts.bind(this);
+    }
 
   displayPosts() {
     const data = this.props.data;
