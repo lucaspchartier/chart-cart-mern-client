@@ -12,6 +12,7 @@ class AddComment extends Component {
         }
 
         // this.displayPosts = this.displayPosts.bind(this);
+        this.displayComments = this.displayComments.bind(this);
         this.bindCommentToPost = this.bindCommentToPost.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
