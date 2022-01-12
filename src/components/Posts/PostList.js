@@ -44,15 +44,15 @@ class PostList extends Component {
         }
     };
 
-  render() {
-    return (
-      <div className="post-list">
-        {this.displayPosts()}
-        <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
-        <AddPost/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="post-list">
+                {this.displayPosts()}
+                <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
+                <AddPost/>
+            </div>
+        );
+    }
 }
 
 export default graphql(getPostsQuery)(PostList);
