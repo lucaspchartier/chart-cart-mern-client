@@ -7,16 +7,16 @@ import CommentList from "../Comments/CommentList";
 import './PostList.css';
 
 const getPostsQuery = gql`
-  {
-    posts {
-      id
-      text
-      comments {
-        id
-        text
-      }
+    {
+        posts {
+            id
+            text
+            comments {
+                id
+                text
+            }
+        }
     }
-  }
 `;
 
 class PostList extends Component {
