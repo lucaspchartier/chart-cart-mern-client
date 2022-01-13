@@ -28,7 +28,7 @@ class AddComment extends Component {
     //     }
     // }
 
-    displayComments() {
+    displayComments(e) {
         const data = this.props;
         if (data.addCommentMutationResult.loading) {
             return (<option>Loading Comments...</option>)
