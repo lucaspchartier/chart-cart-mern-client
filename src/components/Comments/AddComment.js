@@ -12,7 +12,7 @@ class AddComment extends Component {
         }
 
         // this.displayPosts = this.displayPosts.bind(this);
-        this.displayComments = this.displayComments.bind(this);
+        // this.displayComments = this.displayComments.bind(this);
         this.bindCommentToPost = this.bindCommentToPost.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
@@ -61,16 +61,12 @@ class AddComment extends Component {
         return (
             <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
                 <div className="field">
-                    <input 
-                        type="text"
-                        placeholder="comment"
-                        onChange={e => {
-                            this.setState({ text: e.target.value })
-                            this.bindCommentToPost(this.setState({ postId: this.props.postId }))
-                            // this.displayPosts()
-                            this.displayComments.bind(this)
-                        }}
-                    />
+                    <input type="text" placeholder="comment" onChange={e => {
+                        this.setState({ text: e.target.value })
+                        this.bindCommentToPost(this.setState({ postId: this.props.postId }))
+                        // this.displayPosts()
+                        this.displayComments.bind(this)
+                    }}/>
                 </div>
 
                 <button>+</button>
