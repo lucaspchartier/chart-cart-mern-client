@@ -65,7 +65,7 @@ class AddComment extends Component {
                         this.setState({ text: e.target.value })
                         this.bindCommentToPost(this.setState({ postId: this.props.postId }))
                         // this.displayPosts()
-                        this.displayComments.bind(this)
+                        this.displayComments()
                     }}/>
                 </div>
 
