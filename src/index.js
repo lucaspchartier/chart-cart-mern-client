@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-const render = Component => {}
+const render = Component => {
 	ReactDOM.render(
 		<React.StrictMode>
 			<Component />
 		</React.StrictMode>,
-	document.getElementById('root')
-);
+		document.getElementById('root')
+	);
+}
 
 render(App);
