@@ -6,9 +6,9 @@ import App from './App';
 
 const render = Component => {
 	ReactDOM.render(
-		<React.StrictMode>
+		<AppContainer>
 			<Component />
-		</React.StrictMode>,
+		</AppContainer>,
 		document.getElementById('root')
 	);
 }
