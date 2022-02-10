@@ -4,8 +4,6 @@ import { AppContainer, setConfig } from 'react-hot-loader'
 import './index.css';
 import App from './App';
 
-setConfig({ integratedResolver: false });
-
 const render = Component => {
 	ReactDOM.render(
 		<AppContainer>
