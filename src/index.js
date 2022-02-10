@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer, setConfig } from 'react-hot-loader'
 import './index.css';
 import App from './App';
 
