@@ -4,15 +4,6 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
 class AddPost extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            text: ""
-        }
-
-        this.submitForm = this.submitForm.bind(this);
-    }
-
     submitForm(e) {
         e.preventDefault();
         this.props.addPostMutation({
