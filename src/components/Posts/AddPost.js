@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
-class AddPost extends Component {
+function AddPost() {
     submitForm(e) {
         e.preventDefault();
         this.props.addPostMutation({
