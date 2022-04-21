@@ -6,9 +6,9 @@ import { getPostsQuery, addPostMutation } from "../../queries/queries";
 function AddPost() {
     const [inputField, setInputField] = useState([
         { text: '' }
-    ])
+    ]);
 
-    submitForm(e) {
+    submitForm(e); {
         e.preventDefault();
         this.props.addPostMutation({
             variables: {
