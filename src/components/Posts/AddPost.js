@@ -8,7 +8,7 @@ function AddPost() {
         { text: '' }
     ]);
 
-    submitForm(e); {
+    const submitForm = e => {
         e.preventDefault();
         this.props.addPostMutation({
             variables: {
