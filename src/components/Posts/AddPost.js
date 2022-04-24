@@ -4,7 +4,7 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
 function AddPost() {
-    const [inputField, setInputField] = useState([
+    const [inputFields, setInputField] = useState([
         { text: '' }
     ]);
 
@@ -21,13 +21,11 @@ function AddPost() {
 
     return (
         <form id="add-post" onSubmit={this.submitForm.bind(this)}>
-            <div className="field">
-                <input
-                    type="text"
-                    placeholder="post"
-                    onChange={e => this.setState({ text: e.target.value })}
-                />
-            </div>
+            { inputFields.map((inputField, index) => (
+                <div key={index}>
+                    <input type="text"/>
+                </div>
+            )) }
 
             <button>+</button>
         </form>
