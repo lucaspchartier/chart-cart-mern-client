@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
