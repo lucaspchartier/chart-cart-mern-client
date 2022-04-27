@@ -23,7 +23,11 @@ export const AddPost = () => {
         <form id="add-post" onSubmit={submitForm}>
             { inputFields.map((inputField, index) => (
                 <div key={index}>
-                    <input type="text"/>
+                    <input
+                        name="text"
+                        label="Text"
+                        value={inputField.text}
+                    />
                 </div>
             )) }
 
