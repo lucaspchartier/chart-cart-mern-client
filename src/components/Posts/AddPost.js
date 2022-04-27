@@ -20,7 +20,7 @@ function AddPost() {
     }
 
     return (
-        <form id="add-post" onSubmit={this.submitForm.bind(this)}>
+        <form id="add-post" onSubmit={submitForm}>
             { inputFields.map((inputField, index) => (
                 <div key={index}>
                     <input type="text"/>
