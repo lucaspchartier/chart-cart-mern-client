@@ -17,11 +17,11 @@ export const AddPost = () => {
             refetchQueries: [{ query: getPostsQuery }]
         });
         e.target.reset();
-    }
+    };
 
     return (
         <form id="add-post">
-            { inputFields.map((inputField, index) => (
+            {inputFields.map((inputField, index) => (
                 <div key={index}>
                     <input
                         name="text"
@@ -30,7 +30,7 @@ export const AddPost = () => {
                         onChange={e => setInputField(e.target.value)}
                     />
                 </div>
-            )) }
+            ))}
 
             <button onClick={submitForm}>+</button>
         </form>
