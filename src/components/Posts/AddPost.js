@@ -4,9 +4,7 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
 export const AddPost = () => {
-    const [inputFields, setInputField] = useState([
-        { text: '' }
-    ]);
+    const [inputFields, setInputField] = useState([ { text: "" } ]);
 
     const submitForm = e => {
         e.preventDefault();
