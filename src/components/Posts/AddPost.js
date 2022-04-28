@@ -20,18 +20,19 @@ export const AddPost = () => {
     }
 
     return (
-        <form id="add-post" onSubmit={submitForm}>
+        <form id="add-post">
             { inputFields.map((inputField, index) => (
                 <div key={index}>
                     <input
                         name="text"
                         label="Text"
                         value={inputField.text}
+                        onChange={e => setInputField(e.target.value)}
                     />
                 </div>
             )) }
 
-            <button>+</button>
+            <button onClick={submitForm}>+</button>
         </form>
     );
 }
