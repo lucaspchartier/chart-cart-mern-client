@@ -17,6 +17,10 @@ export const AddPost = () => {
         e.target.reset();
     };
 
+    const handleChangeInput = (e, index) => {
+        
+    }
+
     return (
         <form id="add-post">
             {inputFields.map((inputField, index) => (
