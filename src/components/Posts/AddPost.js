@@ -31,7 +31,7 @@ export const AddPost = () => {
                         name="text"
                         label="Text"
                         value={inputField.text}
-                        onChange={e => setInputFields(e.target.value)}
+                        onChange={e => handleChangeInput(e, index)}
                     />
                 </div>
             ))}
