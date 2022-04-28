@@ -18,8 +18,8 @@ export const AddPost = () => {
     };
 
     const handleChangeInput = (e, index) => {
-        
-    }
+        const values = [...inputFields];
+    };
 
     return (
         <form id="add-post">
