@@ -19,6 +19,7 @@ export const AddPost = () => {
 
     const handleChangeInput = (e, index) => {
         const values = [...inputFields];
+        values[index][e.target.text] = e.target.value;
     };
 
     return (
