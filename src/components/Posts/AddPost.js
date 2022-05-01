@@ -3,28 +3,30 @@ import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
-export const AddPost = () => {
+export const AddPost = props => {
     const [inputFields, setInputFields] = useState([ { text: "" } ]);
+    console.log(inputFields);
 
     const submitForm = e => {
         e.preventDefault();
-        this.props.addPostMutation({
+        props.addPostMutation({
+            ...inputFields,
             variables: {
-                text: this.state.text
+                text: inputFields.text
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
         e.target.reset();
     };
 
-    const handleTextInput = e => {
-        e.persist();
-        setInputFields(inputFields => ({
-            ...inputFields,
-            text: e.target.value
-        }));
-        console.log(inputFields.text);
-    };
+    // const handleTextInput = e => {
+    //     e.persist();
+    //     setInputFields(inputFields => ({
+    //         ...inputFields,
+    //         text: e.target.value
+    //     }));
+    //     console.log(inputFields.text);
+    // };
 
     return (
         <form id="add-post">
@@ -32,7 +34,7 @@ export const AddPost = () => {
                 name="text"
                 label="Text"
                 value={inputFields.text}
-                onChange={handleTextInput}
+                onChange={e => setInputFields(e.target.value)}
             />
 
             <button onClick={submitForm}>+</button>
