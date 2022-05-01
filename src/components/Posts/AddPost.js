@@ -9,9 +9,8 @@ export const AddPost = props => {
     const submitForm = e => {
         e.preventDefault();
         props.addPostMutation({
-            ...inputFields,
             variables: {
-                text: inputFields.text
+                text: inputFields
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
