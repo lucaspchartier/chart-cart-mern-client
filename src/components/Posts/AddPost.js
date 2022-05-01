@@ -14,17 +14,7 @@ export const AddPost = props => {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
-        // e.target.reset();
     };
-
-    // const handleTextInput = e => {
-    //     e.persist();
-    //     setInputFields(inputFields => ({
-    //         ...inputFields,
-    //         text: e.target.value
-    //     }));
-    //     console.log(inputFields.text);
-    // };
 
     return (
         <form id="add-post">
