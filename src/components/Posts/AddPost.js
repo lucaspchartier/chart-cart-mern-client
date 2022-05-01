@@ -17,7 +17,7 @@ export const AddPost = () => {
         e.target.reset();
     };
 
-    const handleChangeInput = e => {
+    const handleTextInput = e => {
         e.persist();
         setInputFields(inputFields => ({
             ...inputFields,
@@ -32,7 +32,7 @@ export const AddPost = () => {
                 name="text"
                 label="Text"
                 value={inputFields.text}
-                onChange={handleChangeInput}
+                onChange={handleTextInput}
             />
 
             <button onClick={submitForm}>+</button>
