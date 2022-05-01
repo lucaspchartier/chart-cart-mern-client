@@ -17,24 +17,23 @@ export const AddPost = () => {
         e.target.reset();
     };
 
-    const handleChangeInput = (e, index) => {
-        const values = [...inputFields];
-        values[index][e.target.text] = e.target.value;
-        setInputFields(values);
+    const handleChangeInput = e => {
+        e.persist();
+        setInputFields(inputFields => ({
+            ...inputFields,
+            text: e.target.value
+        }));
+        console.log(inputFields.text);
     };
 
     return (
         <form id="add-post">
-            {inputFields.map((inputField, index) => (
-                <div key={index}>
-                    <input
-                        name="text"
-                        label="Text"
-                        value={inputField.text}
-                        onChange={e => handleChangeInput(e, index)}
-                    />
-                </div>
-            ))}
+            <input
+                name="text"
+                label="Text"
+                value={inputFields.text}
+                onChange={handleChangeInput}
+            />
 
             <button onClick={submitForm}>+</button>
         </form>
