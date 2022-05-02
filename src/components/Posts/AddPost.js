@@ -4,26 +4,26 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
 export const AddPost = props => {
-    const [inputFields, setInputFields] = useState([ { text: "" } ]);
+    const [postTextFields, setPostTextFields] = useState([ { text: "" } ]);
 
     const submitForm = e => {
         e.preventDefault();
         props.addPostMutation({
             variables: {
-                text: inputFields
+                text: postTextFields
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
     };
 
-    const handleTextInput = e => setInputFields(e.target.value);
+    const handleTextInput = e => setPostTextFields(e.target.value);
 
     return (
         <form id="add-post">
             <input
                 name="text"
                 label="Text"
-                value={inputFields.text}
+                value={postTextFields.text}
                 onChange={handleTextInput}
             />
 
