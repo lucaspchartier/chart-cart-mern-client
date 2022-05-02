@@ -23,6 +23,7 @@ export const AddPost = props => {
             <input
                 name="text"
                 label="Text"
+                placeholder="post"
                 value={postTextFields.text}
                 onChange={handlePostTextInput}
             />
