@@ -16,7 +16,7 @@ export const AddPost = props => {
         });
     };
 
-    const handleTextInnput = e => setInputFields(e.target.value);
+    const handleTextInput = e => setInputFields(e.target.value);
 
     return (
         <form id="add-post">
@@ -24,7 +24,7 @@ export const AddPost = props => {
                 name="text"
                 label="Text"
                 value={inputFields.text}
-                onChange={e => setInputFields(e.target.value)}
+                onChange={handleTextInput}
             />
 
             <button onClick={submitForm}>+</button>
