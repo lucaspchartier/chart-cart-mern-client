@@ -8,7 +8,7 @@ export const AddPost = props => {
         text: ""
     };
 
-    const [postTextFields, setPostTextFields] = useState([ { text: "" } ]);
+    const [postTextFields, setPostTextFields] = useState(state);
 
     const submitForm = e => {
         e.preventDefault();
