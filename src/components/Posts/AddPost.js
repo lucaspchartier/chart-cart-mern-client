@@ -4,6 +4,10 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
 export const AddPost = props => {
+    const state = {
+        text: ""
+    };
+
     const [postTextFields, setPostTextFields] = useState([ { text: "" } ]);
 
     const submitForm = e => {
@@ -14,6 +18,7 @@ export const AddPost = props => {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
+        console.log(setPostTextFields(), postTextFields);
     };
 
     const handlePostTextInput = e => setPostTextFields(e.target.value);
