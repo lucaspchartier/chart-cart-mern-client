@@ -11,7 +11,7 @@ export const AddPost = props => {
     const [postTextFields, setPostTextFields] = useState(state);
 
     const resetForm = () => {
-        console.log(this.state);
+        console.log(state);
     };
 
     const submitForm = e => {
@@ -22,6 +22,7 @@ export const AddPost = props => {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
+        resetForm();
     };
 
     const handlePostTextInput = e => setPostTextFields(e.target.value);
@@ -29,7 +30,7 @@ export const AddPost = props => {
     return (
         <form id="add-post">
             <input
-                name="text"
+                type="text"
                 label="Text"
                 placeholder="post"
                 value={postTextFields.text}
