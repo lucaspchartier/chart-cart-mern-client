@@ -11,7 +11,6 @@ export const AddPost = props => {
     };
 
     const submitForm = e => {
-        console.log(props);
         e.preventDefault();
         props.addPostMutation({
             variables: {
