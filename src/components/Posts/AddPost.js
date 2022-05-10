@@ -7,7 +7,7 @@ export const AddPost = props => {
     const [postTextFields, setPostTextFields] = useState({ text: "" });
 
     const resetForm = () => {
-        console.log(state);
+        console.log(postTextFields);
     };
 
     const submitForm = e => {
@@ -15,7 +15,7 @@ export const AddPost = props => {
         e.preventDefault();
         props.addPostMutation({
             variables: {
-                text: postTextFields
+                text: postTextFields.text
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
@@ -30,7 +30,7 @@ export const AddPost = props => {
                 type="text"
                 label="Text"
                 placeholder="post"
-                value={postTextFields.text}
+                value={postTextFields}
                 onChange={handlePostTextInput}
             />
 
