@@ -22,8 +22,7 @@ export const AddPost = props => {
     };
 
     const handlePostTextInput = e => {
-        console.log(setPostTextFields(e));
-        setPostTextFields(e.target.value);
+        setPostTextFields(...e.target.value);
     };
 
     return (
