@@ -14,7 +14,9 @@ export const AddPost = props => {
         e.preventDefault();
         props.addPostMutation({
             variables: {
-                text: postTextFields
+                text: {
+                    ...postTextFields
+                }
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
@@ -22,7 +24,8 @@ export const AddPost = props => {
     };
 
     const handlePostTextInput = e => {
-        setPostTextFields(...e.target.value);
+        console.log(e.target.value);
+        setPostTextFields(e.target.value);
     };
 
     return (
@@ -32,7 +35,7 @@ export const AddPost = props => {
                 label="Text"
                 placeholder="post"
                 value={postTextFields}
-                onChange={e => handlePostTextInput(e)}
+                onChange={handlePostTextInput}
             />
 
             <button onClick={submitForm}>+</button>
