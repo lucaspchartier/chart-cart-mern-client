@@ -21,7 +21,10 @@ export const AddPost = props => {
         // resetForm();
     };
 
-    const handlePostTextInput = e => setPostTextFields(e.target.value);
+    const handlePostTextInput = e => {
+        console.log(setPostTextFields(e));
+        setPostTextFields(e.target.value);
+    };
 
     return (
         <form id="add-post">
@@ -30,7 +33,7 @@ export const AddPost = props => {
                 label="Text"
                 placeholder="post"
                 value={postTextFields}
-                onChange={handlePostTextInput}
+                onChange={e => handlePostTextInput(e)}
             />
 
             <button onClick={submitForm}>+</button>
