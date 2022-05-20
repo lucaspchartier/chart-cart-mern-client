@@ -6,10 +6,6 @@ import { getPostsQuery, addPostMutation } from "../../queries/queries";
 export const AddPost = props => {
     const [postTextFields, setPostTextFields] = useState({ text: "" });
 
-    // const resetForm = () => {
-    //     console.log(postTextFields.text);
-    // };
-
     const submitForm = e => {
         e.preventDefault();
         props.addPostMutation({
@@ -20,7 +16,6 @@ export const AddPost = props => {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
-        // resetForm();
     };
 
     const handlePostTextInput = e => {
