@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
@@ -20,15 +20,7 @@ const getPostsQuery = gql`
 `;
 
 export const PostList = () => {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedPost: null,
-            comments: []
-        }
-
-        this.displayPosts = this.displayPosts.bind(this);
-    }
+    const [comments, setComments] = useState([]);
 
     const displayPosts = () => {
         const data = this.props.data;
