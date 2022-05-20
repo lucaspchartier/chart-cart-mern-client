@@ -8,7 +8,7 @@ export const AddPost = props => {
 
     const handlePostTextInput = e => setPostTextFields(e.target.value);
 
-    const submitForm = e => {
+    const submitPost = e => {
         e.preventDefault();
         props.addPostMutation({
             variables: {
@@ -29,7 +29,7 @@ export const AddPost = props => {
                 onChange={handlePostTextInput}
             />
 
-            <button onClick={submitForm}>+</button>
+            <button onClick={submitPost}>+</button>
         </form>
     );
 }
