@@ -11,22 +11,10 @@ class AddComment extends Component {
             text: ""
         }
 
-        // this.displayPosts = this.displayPosts.bind(this);
         this.displayComments = this.displayComments.bind(this);
         this.bindCommentToPost = this.bindCommentToPost.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
-
-    // displayPosts() {
-    //     const data = this.props.getPostsQuery;
-    //     if (data.loading) {
-    //         return (<option>Loading Posts...</option>)
-    //     } else {
-    //         return data.posts.map(post => {
-    //             return (<option key={post.id} value={post.id}>{post.text}</option>)
-    //         });
-    //     }
-    // }
 
     displayComments() {
         const data = this.props;
@@ -63,7 +51,6 @@ class AddComment extends Component {
                     <input type="text" placeholder="comment" onChange={e => {
                         this.setState({ text: e.target.value })
                         this.bindCommentToPost(this.setState({ postId: this.props.postId }))
-                        // this.displayPosts()
                         this.displayComments()
                     }}/>
                 </div>
