@@ -19,7 +19,7 @@ const getPostsQuery = gql`
     }
 `;
 
-class PostList extends Component {
+export const PostList = () => {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,15 +44,13 @@ class PostList extends Component {
         }
     };
 
-    render() {
-        return (
-            <div className="post-list">
-                {this.displayPosts()}
-                <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
-                <AddPost/>
-            </div>
-        );
-    }
+    return (
+        <div className="post-list">
+            {this.displayPosts()}
+            <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
+            <AddPost/>
+        </div>
+    );
 }
 
 export default graphql(getPostsQuery)(PostList);
