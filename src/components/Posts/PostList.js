@@ -30,7 +30,7 @@ export const PostList = () => {
         this.displayPosts = this.displayPosts.bind(this);
     }
 
-    displayPosts() {
+    const displayPosts = () => {
         const data = this.props.data;
         if (data.loading) {
             return (<div>Loading...</div>);
