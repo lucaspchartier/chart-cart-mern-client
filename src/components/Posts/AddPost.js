@@ -14,6 +14,7 @@ export const AddPost = props => {
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
+        setPostTextFields("");
     };
 
     const handlePostTextInput = e => setPostTextFields(e.target.value);
