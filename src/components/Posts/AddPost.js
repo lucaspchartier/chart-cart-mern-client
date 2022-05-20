@@ -16,10 +16,7 @@ export const AddPost = props => {
         });
     };
 
-    const handlePostTextInput = e => {
-        console.log(e.target.value);
-        setPostTextFields(e.target.value);
-    };
+    const handlePostTextInput = e => setPostTextFields(e.target.value);
 
     return (
         <form id="add-post">
