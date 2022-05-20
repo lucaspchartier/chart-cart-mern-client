@@ -19,11 +19,11 @@ const getPostsQuery = gql`
     }
 `;
 
-export const PostList = () => {
+export const PostList = props => {
     const [comments, setComments] = useState([]);
 
     const displayPosts = () => {
-        const data = this.props.data;
+        const data = props.data;
         if (data.loading) {
             return (<div>Loading...</div>);
         } else {
