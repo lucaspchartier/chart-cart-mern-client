@@ -24,21 +24,21 @@ export const PostList = props => {
 
     const displayPosts = () => {
         const data = props.data;
-        if (data.loading) {
-            return (<div>Loading...</div>);
-        } else {
-            return data.posts.map(post => {
-                return <div key={post.id} onClick={e => {this.setState({
-                    selectedPost: post.id,
-                    comments: post.comments
-                })}}>{post.text}</div>
-            });
-        }
+        console.log(data);
+        // if (data.loading) {
+        //     return (<div>Loading...</div>);
+        // } else {
+        //     return data.posts.map(post => {
+        //         return <div key={post.id} onClick={e => {this.setState({
+        //             selectedPost: post.id,
+        //             comments: post.comments
+        //         })}}>{post.text}</div>
+        //     });
     };
 
     return (
         <div className="post-list">
-            {this.displayPosts()}
+            {displayPosts()}
             <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
             <AddPost/>
         </div>
