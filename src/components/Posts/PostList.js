@@ -29,10 +29,10 @@ export const PostList = props => {
             return (<div>Loading...</div>);
         } else {
             return data.posts.map(post => {
-                return <div key={post.id} onClick={e => {this.setState({
-                    selectedPost: post.id,
-                    comments: post.comments
-                })}}>{post.text}</div>
+                return <div key={post.id} onClick={e => {
+                    setSelectedPost(post.id)
+                    setComments(post.comments)
+                }}>{post.text}</div>
             });
         }
     };
