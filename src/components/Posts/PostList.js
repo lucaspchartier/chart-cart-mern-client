@@ -37,12 +37,11 @@ export const PostList = props => {
         }
     };
 
-    // <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
-
     return (
         <div className="post-list">
             {displayPosts()}
             <AddPost/>
+            <CommentList selectedPost={selectedPost} comments={comments}/>
         </div>
     );
 }
