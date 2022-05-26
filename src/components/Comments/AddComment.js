@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
-export const AddPost = props => {
+export const AddComment = props => {
     const [postId, setPostId] = useState(0);
     const [commentTextFields, setCommentTextFields] = useState("");
 
@@ -35,21 +35,19 @@ export const AddPost = props => {
         e.target.reset();
     }
 
-    render() {
-        return (
-            <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
-                <div className="field">
-                    <input type="text" placeholder="comment" onChange={e => {
-                        this.setState({ text: e.target.value })
-                        this.bindCommentToPost(this.setState({ postId: this.props.postId }))
-                        this.displayComments()
-                    }}/>
-                </div>
+    return (
+        <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
+            <div className="field">
+                <input type="text" placeholder="comment" onChange={e => {
+                    this.setState({ text: e.target.value })
+                    this.bindCommentToPost(this.setState({ postId: this.props.postId }))
+                    this.displayComments()
+                }}/>
+            </div>
 
-                <button>+</button>
-            </form>
-        );
-    }
+            <button>+</button>
+        </form>
+    );
 }
 
 export default flowright(
