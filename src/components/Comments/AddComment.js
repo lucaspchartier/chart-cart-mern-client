@@ -4,17 +4,8 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
 export const AddPost = props => {
-    constructor(props) {
-        super(props)
-        this.state = {
-            postId: "",
-            text: ""
-        }
-
-        this.displayComments = this.displayComments.bind(this);
-        this.bindCommentToPost = this.bindCommentToPost.bind(this);
-        this.submitForm = this.submitForm.bind(this);
-    }
+    const [postId, setPostId] = useState(0);
+    const [commentTextFields, setCommentTextFields] = useState("");
 
     displayComments() {
         const data = this.props;
