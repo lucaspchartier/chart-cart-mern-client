@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
-class AddComment extends Component {
+export const AddPost = props => {
     constructor(props) {
         super(props)
         this.state = {
