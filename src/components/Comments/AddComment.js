@@ -36,12 +36,12 @@ export const AddComment = props => {
     }
 
     return (
-        <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
+        <form id="add-comment" onSubmit={submitForm}>
             <div className="field">
                 <input type="text" placeholder="comment" onChange={e => {
                     this.setState({ text: e.target.value })
                     this.bindCommentToPost(this.setState({ postId: this.props.postId }))
-                    this.displayComments()
+                    displayComments()
                 }}/>
             </div>
 
