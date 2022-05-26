@@ -7,7 +7,7 @@ export const AddPost = props => {
     const [postId, setPostId] = useState(0);
     const [commentTextFields, setCommentTextFields] = useState("");
 
-    displayComments() {
+    const displayComments = () => {
         const data = this.props;
         if (data.addCommentMutationResult.loading) {
             return (<option>Loading Comments...</option>)
@@ -18,12 +18,12 @@ export const AddPost = props => {
         }
     }
 
-    bindCommentToPost(postId) {
+    const bindCommentToPost = id => {
         const posts = this.props.getPostsQuery.posts;
-        return posts.filter(post => post.id === postId);
+        return posts.filter(post => post.id === id);
     }
 
-    submitForm(e) {
+    const submitForm = e => {
         e.preventDefault();
         this.props.addCommentMutation({
             variables: {
