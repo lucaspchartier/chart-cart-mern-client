@@ -28,7 +28,7 @@ export const AddComment = props => {
         this.props.addCommentMutation({
             variables: {
                 postId: this.state.postId,
-                text: this.state.text
+                text: commentTextFields
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
