@@ -25,7 +25,7 @@ export const AddComment = props => {
 
     const submitForm = e => {
         e.preventDefault();
-        this.props.addCommentMutation({
+        props.addCommentMutation({
             variables: {
                 postId: postId,
                 text: commentTextFields
