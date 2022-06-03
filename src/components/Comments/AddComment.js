@@ -32,7 +32,7 @@ export const AddComment = props => {
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
-        e.target.reset();
+        setCommentTextFields("");
     }
 
     return (
