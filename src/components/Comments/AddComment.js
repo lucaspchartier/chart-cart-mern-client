@@ -36,7 +36,7 @@ export const AddComment = props => {
     }
 
     return (
-        <form id="add-comment" onSubmit={submitForm}>
+        <form id="add-comment">
             <div className="field">
                 <input
                     type="text"
@@ -50,7 +50,7 @@ export const AddComment = props => {
                     }}/>
             </div>
 
-            <button>+</button>
+            <button onClick={submitForm}>+</button>
         </form>
     );
 }
