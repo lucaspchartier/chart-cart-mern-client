@@ -45,11 +45,8 @@ export const AddComment = props => {
                     label="Text"
                     placeholder="comment"
                     value={commentTextFields}
-                    onChange={e => {
-                        this.setState({ text: e.target.value })
-                        bindCommentToPost(this.setState({ postId: this.props.postId }))
-                        displayComments()
-                    }}/>
+                    onChange={handleCommentTextInput}
+                />
             </div>
 
             <button onClick={submitComment}>+</button>
