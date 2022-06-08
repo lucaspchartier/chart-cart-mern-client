@@ -23,7 +23,7 @@ export const AddComment = props => {
         return posts.filter(post => post.id === id);
     }
 
-    const submitForm = e => {
+    const submitComment = e => {
         e.preventDefault();
         props.addCommentMutation({
             variables: {
@@ -50,7 +50,7 @@ export const AddComment = props => {
                     }}/>
             </div>
 
-            <button onClick={submitForm}>+</button>
+            <button onClick={submitComment}>+</button>
         </form>
     );
 }
