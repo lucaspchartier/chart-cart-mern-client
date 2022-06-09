@@ -7,19 +7,19 @@ export const AddComment = props => {
     const [postId, setPostId] = useState(0);
     const [commentTextFields, setCommentTextFields] = useState("");
 
-    const displayComments = () => {
-        const data = this.props;
-        if (data.addCommentMutationResult.loading) {
-            return (<option>Loading Comments...</option>)
-        } else {
-            return data.comments.map(comment => {
-                return (<option key={comment.id} value={comment.id}>{comment.text}</option>)
-            });
-        }
-    }
+    // const displayComments = () => {
+    //     const data = props;
+    //     if (data.addCommentMutationResult.loading) {
+    //         return (<option>Loading Comments...</option>)
+    //     } else {
+    //         return data.comments.map(comment => {
+    //             return (<option key={comment.id} value={comment.id}>{comment.text}</option>)
+    //         });
+    //     }
+    // }
 
     const bindCommentToPost = id => {
-        const posts = this.props.getPostsQuery.posts;
+        const posts = props.getPostsQuery.posts;
         return posts.filter(post => post.id === id);
     }
 
