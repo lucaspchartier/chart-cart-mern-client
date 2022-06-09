@@ -24,6 +24,8 @@ export const AddComment = props => {
     // }
 
     const handleCommentTextInput = (e, id) => {
+        id = props.getPostsQuery.posts.filter(post => post.id === id);
+        setPostId(id);
         setCommentTextFields(e.target.value);
     }
 
