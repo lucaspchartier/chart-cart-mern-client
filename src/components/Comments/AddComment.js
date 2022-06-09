@@ -23,9 +23,10 @@ export const AddComment = props => {
     //     return posts.filter(post => post.id === id);
     // }
 
-    const handleCommentTextInput = (e, id) => {
+    const handleCommentTextInput = (id, e) => {
+        console.log(id);
         id = props.getPostsQuery.posts.filter(post => post.id === id);
-        setPostId(id);
+        // setPostId(id);
         setCommentTextFields(e.target.value);
     }
 
@@ -50,7 +51,7 @@ export const AddComment = props => {
                     label="Text"
                     placeholder="comment"
                     value={commentTextFields}
-                    onChange={event => handleCommentTextInput(event, postId)}
+                    onChange={event => handleCommentTextInput(postId, event)}
                 />
             </div>
 
