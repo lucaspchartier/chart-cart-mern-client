@@ -46,7 +46,7 @@ export const AddComment = props => {
                     label="Text"
                     placeholder="comment"
                     value={commentTextFields}
-                    onChange={event => handleCommentTextInput(postId, event)}
+                    onChange={handleCommentTextInput}
                 />
             </div>
 
