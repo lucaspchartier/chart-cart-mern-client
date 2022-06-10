@@ -23,12 +23,7 @@ export const AddComment = props => {
     //     return posts.filter(post => post.id === id);
     // }
 
-    const handleCommentTextInput = (id, e) => {
-        console.log(id);
-        id = props.getPostsQuery.posts.filter(post => post.id === id);
-        // setPostId(id);
-        setCommentTextFields(e.target.value);
-    }
+    const handleCommentTextInput = e => setCommentTextFields(e.target.value);
 
     const submitComment = e => {
         e.preventDefault();
