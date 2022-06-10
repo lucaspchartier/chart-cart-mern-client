@@ -18,12 +18,12 @@ export const AddComment = props => {
     //     }
     // }
 
+    const handleCommentTextInput = e => setCommentTextFields(e.target.value);
+
     const selectedPost = id => {
         const posts = props.getPostsQuery.posts;
         return posts.filter(post => post.id === id);
     }
-
-    const handleCommentTextInput = e => setCommentTextFields(e.target.value);
 
     const submitComment = e => {
         e.preventDefault();
