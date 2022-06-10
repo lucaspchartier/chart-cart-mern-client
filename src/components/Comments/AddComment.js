@@ -18,10 +18,10 @@ export const AddComment = props => {
     //     }
     // }
 
-    // const bindCommentToPost = id => {
-    //     const posts = props.getPostsQuery.posts;
-    //     return posts.filter(post => post.id === id);
-    // }
+    const selectedPost = id => {
+        const posts = props.getPostsQuery.posts;
+        return posts.filter(post => post.id === id);
+    }
 
     const handleCommentTextInput = e => setCommentTextFields(e.target.value);
 
