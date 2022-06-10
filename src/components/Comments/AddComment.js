@@ -47,6 +47,7 @@ export const AddComment = props => {
                     placeholder="comment"
                     value={commentTextFields}
                     onChange={handleCommentTextInput}
+                    onClick={selectedPost(postId)}
                 />
             </div>
 
