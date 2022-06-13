@@ -20,7 +20,7 @@ export const AddComment = props => {
     //     }
     // }
 
-    const handleChangedValues = e => setCommentTextFields(e.target.value);
+    const handleChangedValues = e => setAllValues();
 
     // const selectedPost = id => {
     //     const posts = props.getPostsQuery.posts;
