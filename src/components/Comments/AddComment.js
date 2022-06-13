@@ -20,7 +20,9 @@ export const AddComment = props => {
     //     }
     // }
 
-    const handleChangedValues = e => setAllValues();
+    const handleChangedValues = e => {
+        setAllValues();
+    }
 
     // const selectedPost = id => {
     //     const posts = props.getPostsQuery.posts;
@@ -47,7 +49,7 @@ export const AddComment = props => {
                     type="text"
                     label="Text"
                     placeholder="comment"
-                    value={commentTextFields}
+                    value={allValues}
                     onChange={handleChangedValues}
                 />
             </div>
