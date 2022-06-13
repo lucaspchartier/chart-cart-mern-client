@@ -20,7 +20,7 @@ export const AddComment = props => {
     //     }
     // }
 
-    const handleCommentTextInput = e => setCommentTextFields(e.target.value);
+    const handleChangedValues = e => setCommentTextFields(e.target.value);
 
     // const selectedPost = id => {
     //     const posts = props.getPostsQuery.posts;
@@ -48,7 +48,7 @@ export const AddComment = props => {
                     label="Text"
                     placeholder="comment"
                     value={commentTextFields}
-                    onChange={handleCommentTextInput}
+                    onChange={handleChangedValues}
                 />
             </div>
 
