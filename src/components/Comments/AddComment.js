@@ -54,7 +54,7 @@ export const AddComment = props => {
                     type="text"
                     label="Text"
                     placeholder="comment"
-                    value={allValues}
+                    value={allValues.commentTextFields}
                     onChange={handleChangedValues}
                 />
             </div>
