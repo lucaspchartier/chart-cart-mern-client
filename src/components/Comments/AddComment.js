@@ -22,13 +22,7 @@ export const AddComment = props => {
     //     }
     // }
 
-    const handleChangedValues = e => {
-        setAllValues({
-            ...allValues,
-            [e.target.name]: e.target.value
-        });
-        console.log(handleChangedValues(e))
-    }
+    const handleChangedValues = e => setAllValues({...allValues, [e.target.name]: e.target.value});
 
     // const selectedPost = id => {
     //     const posts = props.getPostsQuery.posts;
