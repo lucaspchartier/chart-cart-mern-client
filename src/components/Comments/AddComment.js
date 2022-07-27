@@ -41,7 +41,7 @@ export const AddComment = props => {
             refetchQueries: [{ query: getCommentsQuery }]
         });
         setAllValues(values)
-    }
+    };
 
     return (
         <form id="add-comment">
