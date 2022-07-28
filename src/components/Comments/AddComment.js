@@ -33,10 +33,9 @@ export const AddComment = props => {
         e.preventDefault();
         props.addCommentMutation({
             variables: {
-                values: {
-                    postId: allValues.postId,
-                    text: allValues.commentTextFields
-                }
+                postId: allValues.postId,
+                text: allValues.commentTextFields
+            
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
