@@ -9,7 +9,6 @@ export const CommentList = props => {
 
     const displayComments = () => {
         const comments = props.comments;
-        console.log(props);
         return comments.map(comment => {
             return <ul key={comment.id} onClick={e => {
                 setPostId(props.selectedPost);
