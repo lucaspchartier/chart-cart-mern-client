@@ -7,10 +7,6 @@ export const CommentList = props => {
     const [comments, setComments] = useState([]);
     const [selectedPost, setSelectedPost] = useState(0);
 
-        // this.handleChange = this.handleChange.bind(this);
-        this.displayComments = this.displayComments.bind(this);
-    }
-
     // handleChange(e) {
     //     this.setState({
     //         postId: this.props.selectedPost,
