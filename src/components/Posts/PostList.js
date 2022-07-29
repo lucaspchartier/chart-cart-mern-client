@@ -20,8 +20,8 @@ const getPostsQuery = gql`
 `;
 
 export const PostList = props => {
-    const [comments, setComments] = useState([]);
     const [selectedPost, setSelectedPost] = useState(0);
+    const [comments, setComments] = useState([]);
 
     const displayPosts = () => {
         const data = props.data;
