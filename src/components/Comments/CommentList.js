@@ -16,6 +16,7 @@ export const CommentList = props => {
 
     const displayComments = () => {
         const comments = props.comments;
+        console.log(comments);
         return comments.map(comment => {
             return <ul key={comment.id} onClick={e => {this.setState({
                 postId: this.props.selectedPost,
@@ -27,7 +28,7 @@ export const CommentList = props => {
     return (
         <div className="comment-list" /* onChange={this.handleChange} */ >
             {displayComments()}
-            <AddComment postId={this.state.postId} comments={this.state.comments}/>
+            <AddComment postId={selectedPost} comments={comments}/>
         </div>
     );
 }
