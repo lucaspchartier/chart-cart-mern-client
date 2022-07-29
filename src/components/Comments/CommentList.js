@@ -24,14 +24,12 @@ export const CommentList = props => {
         });
     }
 
-    render() {
-        return (
-            <div className="comment-list" /* onChange={this.handleChange} */ >
-                {displayComments()}
-                <AddComment postId={this.state.postId} comments={this.state.comments}/>
-            </div>
-        );
-    }
+    return (
+        <div className="comment-list" /* onChange={this.handleChange} */ >
+            {displayComments()}
+            <AddComment postId={this.state.postId} comments={this.state.comments}/>
+        </div>
+    );
 }
 
 export default CommentList;
