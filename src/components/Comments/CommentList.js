@@ -14,7 +14,7 @@ export const CommentList = props => {
     //     });
     // }
 
-    displayComments() {
+    const displayComments = () => {
         const comments = this.props.comments;
         return comments.map(comment => {
             return <ul key={comment.id} onClick={e => {this.setState({
@@ -27,7 +27,7 @@ export const CommentList = props => {
     render() {
         return (
             <div className="comment-list" /* onChange={this.handleChange} */ >
-                {this.displayComments()}
+                {displayComments()}
                 <AddComment postId={this.state.postId} comments={this.state.comments}/>
             </div>
         );
