@@ -18,10 +18,10 @@ export const CommentList = props => {
         const comments = props.comments;
         console.log(comments);
         return comments.map(comment => {
-            return <ul key={comment.id} onClick={e => {this.setState({
-                postId: this.props.selectedPost,
-                comments: this.props.comments
-            })}}><li id="comment">{comment.text}</li></ul>
+            return <ul key={comment.id} onClick={e => {
+                setComments(props.comments);
+                setSelectedPost(props.selectedPost);
+            }}><li id="comment">{comment.text}</li></ul>
         });
     }
 
