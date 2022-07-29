@@ -7,16 +7,8 @@ export const CommentList = props => {
     const [comments, setComments] = useState([]);
     const [selectedPost, setSelectedPost] = useState(0);
 
-    // handleChange(e) {
-    //     this.setState({
-    //         postId: this.props.selectedPost,
-    //         comments: this.props.comments
-    //     });
-    // }
-
     const displayComments = () => {
         const comments = props.comments;
-        console.log(comments);
         return comments.map(comment => {
             return <ul key={comment.id} onClick={e => {
                 setComments(props.comments);
@@ -26,7 +18,7 @@ export const CommentList = props => {
     }
 
     return (
-        <div className="comment-list" /* onChange={this.handleChange} */ >
+        <div className="comment-list">
             {displayComments()}
             <AddComment postId={selectedPost} comments={comments}/>
         </div>
