@@ -3,13 +3,9 @@ import React, { Component } from "react";
 import AddComment from "./AddComment";
 import './CommentList.css';
 
-class CommentList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          postId: null,
-          comments: []
-        }
+export const CommentList = props => {
+    const [comments, setComments] = useState([]);
+    const [selectedPost, setSelectedPost] = useState(0);
 
         // this.handleChange = this.handleChange.bind(this);
         this.displayComments = this.displayComments.bind(this);
