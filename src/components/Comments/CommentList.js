@@ -4,14 +4,14 @@ import AddComment from "./AddComment";
 import './CommentList.css';
 
 export const CommentList = props => {
-    const [selectedPost, setSelectedPost] = useState(0);
+    const [postId, setPostId] = useState(0);
     const [comments, setComments] = useState([]);
 
     const displayComments = () => {
         const comments = props.comments;
         return comments.map(comment => {
             return <ul key={comment.id} onClick={e => {
-                setSelectedPost(props.selectedPost);
+                setPostId(props.postId);
                 setComments(props.comments);
             }}><li id="comment">{comment.text}</li></ul>
         });
@@ -20,7 +20,7 @@ export const CommentList = props => {
     return (
         <div className="comment-list">
             {displayComments()}
-            <AddComment postId={selectedPost} comments={comments}/>
+            <AddComment postId={postId} comments={comments}/>
         </div>
     );
 }
