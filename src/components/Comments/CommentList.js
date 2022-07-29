@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
 import AddComment from "./AddComment";
 import './CommentList.css';
