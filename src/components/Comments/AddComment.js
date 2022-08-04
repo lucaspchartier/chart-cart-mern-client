@@ -4,10 +4,12 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
 export const AddComment = props => {
-    const [allCommentValues, setAllCommentValues] = useState({
+    const commentValues = {
         postId: 0,
         commentTextFields: ""
-    });
+    };
+
+    const [allCommentValues, setAllCommentValues] = useState(commentValues);
 
     // const displayComments = () => {
     //     const data = props;
