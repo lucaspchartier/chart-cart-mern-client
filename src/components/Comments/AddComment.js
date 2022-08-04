@@ -4,7 +4,7 @@ import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
 export const AddComment = props => {
-    const [allValues, setAllValues] = useState({
+    const [allCommentValues, setAllCommentValues] = useState({
         postId: "",
         commentTextFields: ""
     });
@@ -22,7 +22,7 @@ export const AddComment = props => {
 
     const handleChangedValues = e => {
         console.log(props);
-        setAllValues({...allValues, [e.target.name]: e.target.value});
+        setAllCommentValues({...allCommentValues, [e.target.name]: e.target.value});
     }
 
     // const selectedPost = id => {
@@ -40,7 +40,7 @@ export const AddComment = props => {
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
-        setAllValues(values)
+        setAllCommentValues(values)
     };
 
     return (
