@@ -21,6 +21,7 @@ export const AddComment = props => {
     // }
 
     const handleChangedCommentValues = (e, id) => {
+        allCommentValues.postId = id;
         setAllCommentValues({...allCommentValues, [e.target.name]: e.target.value});
     }
 
@@ -51,7 +52,7 @@ export const AddComment = props => {
                     type="text"
                     label="Text"
                     placeholder="comment"
-                    onChange={event => handleChangedCommentValues(event, props.postId)}
+                    onChange={handleChangedCommentValues}
                 />
             </div>
 
