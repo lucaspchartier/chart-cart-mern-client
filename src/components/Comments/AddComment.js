@@ -40,7 +40,10 @@ export const AddComment = props => {
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
-        setAllCommentValues(values)
+        setAllCommentValues({
+            postId: "",
+            commentTextFields: ""
+        })
     };
 
     return (
