@@ -20,7 +20,7 @@ export const AddComment = props => {
     //     }
     // }
 
-    const handleChangedCommentValues = e => {
+    const handleChangedCommentValues = (e, id) => {
         setAllCommentValues({...allCommentValues, [e.target.name]: e.target.value});
     }
 
