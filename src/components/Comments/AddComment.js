@@ -17,7 +17,7 @@ export const AddComment = props => {
             postId: id,
             commentTextFields: e.target.value
         });
-    }
+    };
 
     const submitComment = e => {
         e.preventDefault();
