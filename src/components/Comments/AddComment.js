@@ -21,8 +21,11 @@ export const AddComment = props => {
     // }
 
     const handleChangedCommentValues = (e, id) => {
-        // allCommentValues.postId = id;
-        setAllCommentValues({...allCommentValues, [e.target.name]: e.target.value});
+        setAllCommentValues({
+            ...allCommentValues,
+            postId: id,
+            commentTextFields: e.target.value
+        });
     }
 
     // const selectedPost = id => {
