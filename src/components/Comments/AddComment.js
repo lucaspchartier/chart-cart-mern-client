@@ -5,7 +5,7 @@ import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queri
 
 export const AddComment = props => {
     const [allCommentValues, setAllCommentValues] = useState({
-        postId: "",
+        postId: 0,
         commentTextFields: ""
     });
 
@@ -51,7 +51,7 @@ export const AddComment = props => {
                     type="text"
                     label="Text"
                     placeholder="comment"
-                    onChange={handleChangedCommentValues}
+                    onChange={event => handleChangedCommentValues(event, props.postId)}
                 />
             </div>
 
