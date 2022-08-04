@@ -41,7 +41,7 @@ export const AddComment = props => {
         setAllCommentValues({
             postId: "",
             commentTextFields: ""
-        })
+        });
     };
 
     return (
