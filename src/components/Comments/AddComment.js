@@ -21,7 +21,6 @@ export const AddComment = props => {
     // }
 
     const handleChangedValues = e => {
-        console.log(props);
         setAllCommentValues({...allCommentValues, [e.target.name]: e.target.value});
     }
 
@@ -34,8 +33,8 @@ export const AddComment = props => {
         e.preventDefault();
         props.addCommentMutation({
             variables: {
-                postId: values.postId,
-                text: values.commentTextFields
+                postId: allCommentValues.postId,
+                text: allCommentValues.commentTextFields
             
             },
             refetchQueries: [{ query: getCommentsQuery }]
