@@ -11,17 +11,6 @@ export const AddComment = props => {
 
     const [allCommentValues, setAllCommentValues] = useState(commentValues);
 
-    // const displayComments = () => {
-    //     const data = props;
-    //     if (data.addCommentMutationResult.loading) {
-    //         return (<option>Loading Comments...</option>)
-    //     } else {
-    //         return data.comments.map(comment => {
-    //             return (<option key={comment.id} value={comment.id}>{comment.text}</option>)
-    //         });
-    //     }
-    // }
-
     const handleChangedCommentValues = (e, id) => {
         setAllCommentValues({
             ...allCommentValues,
@@ -29,11 +18,6 @@ export const AddComment = props => {
             commentTextFields: e.target.value
         });
     }
-
-    // const selectedPost = id => {
-    //     const posts = props.getPostsQuery.posts;
-    //     return posts.filter(post => post.id === id);
-    // }
 
     const submitComment = e => {
         e.preventDefault();
