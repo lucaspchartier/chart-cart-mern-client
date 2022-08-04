@@ -20,7 +20,7 @@ export const AddComment = props => {
     //     }
     // }
 
-    const handleChangedValues = e => {
+    const handleChangedCommentValues = e => {
         setAllCommentValues({...allCommentValues, [e.target.name]: e.target.value});
     }
 
@@ -51,7 +51,7 @@ export const AddComment = props => {
                     type="text"
                     label="Text"
                     placeholder="comment"
-                    onChange={handleChangedValues}
+                    onChange={handleChangedCommentValues}
                 />
             </div>
 
