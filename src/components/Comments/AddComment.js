@@ -39,6 +39,7 @@ export const AddComment = props => {
                 type="text"
                 label="Text"
                 placeholder="comment"
+                value={allCommentValues.commentTextFields}
                 onChange={event => handleChangedCommentValues(event, props.postId)}
             />
 
