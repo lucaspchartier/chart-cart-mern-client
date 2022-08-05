@@ -26,7 +26,11 @@ export const AddComment = props => {
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
-        setAllCommentValues(commentValues);
+        setAllCommentValues({
+            ...allCommentValues,
+            postId: 0,
+            commentTextFields: ""
+        });
     };
 
     return (
