@@ -35,14 +35,12 @@ export const AddComment = props => {
 
     return (
         <form id="add-comment">
-            <div className="field">
-                <input
-                    type="text"
-                    label="Text"
-                    placeholder="comment"
-                    onChange={event => handleChangedCommentValues(event, props.postId)}
-                />
-            </div>
+            <input
+                type="text"
+                label="Text"
+                placeholder="comment"
+                onChange={event => handleChangedCommentValues(event, props.postId)}
+            />
 
             <button onClick={submitComment}>+</button>
         </form>
