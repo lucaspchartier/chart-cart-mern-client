@@ -3,6 +3,8 @@ import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
+import CommentList from "./CommentList";
+
 export const AddComment = props => {
     const [allCommentValues, setAllCommentValues] = useState({
         postId: 0,
