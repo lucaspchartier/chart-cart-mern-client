@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
