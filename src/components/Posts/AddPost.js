@@ -9,7 +9,6 @@ export const AddPost = props => {
     const handlePostTextInput = e => setPostTextFields(e.target.value);
 
     const submitPost = e => {
-        e.preventDefault();
         props.addPostMutation({
             variables: {
                 text: postTextFields
