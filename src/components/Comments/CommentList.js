@@ -20,7 +20,7 @@ export const CommentList = props => {
     return (
         <div className="comment-list">
             {displayComments()}
-            <AddComment postId={postId} comments={comments} displayComments={displayComments()}/>
+            <AddComment postId={postId} comments={comments} displayComments={displayComments}/>
         </div>
     );
 }
