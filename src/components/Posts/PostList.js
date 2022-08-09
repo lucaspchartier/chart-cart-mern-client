@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
@@ -19,40 +19,31 @@ const getPostsQuery = gql`
     }
 `;
 
-class PostList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedPost: null,
-            comments: []
-        }
+export const PostList = props => {
+    const [selectedPost, setSelectedPost] = useState(0);
+    const [comments, setComments] = useState([]);
 
-        this.displayPosts = this.displayPosts.bind(this);
-    }
-
-    displayPosts() {
-        const data = this.props.data;
+    const displayPosts = () => {
+        const data = props.data;
         if (data.loading) {
             return (<div>Loading...</div>);
         } else {
             return data.posts.map(post => {
-                return <div key={post.id} onClick={e => {this.setState({
-                    selectedPost: post.id,
-                    comments: post.comments
-                })}}>{post.text}</div>
+                return <div key={post.id} onClick={e => {
+                    setSelectedPost(post.id)
+                    setComments(post.comments)
+                }}>{post.text}</div>
             });
         }
     };
 
-    render() {
-        return (
-            <div className="post-list">
-                {this.displayPosts()}
-                <CommentList selectedPost={this.state.selectedPost} comments={this.state.comments}/>
-                <AddPost/>
-            </div>
-        );
-    }
+    return (
+        <div className="post-list">
+            {displayPosts()}
+            <AddPost/>
+            <CommentList selectedPost={selectedPost} comments={comments}/>
+        </div>
+    );
 }
 
 export default graphql(getPostsQuery)(PostList);

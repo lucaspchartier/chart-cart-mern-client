@@ -1,35 +1,28 @@
-import React, { Component } from "react";
+import { useState } from "react";
 
 import AddComment from "./AddComment";
 import './CommentList.css';
 
-class CommentList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          postId: null
-        }
+export const CommentList = props => {
+    const [postId, setPostId] = useState(0);
+    const [comments, setComments] = useState([]);
 
-        this.displayComments = this.displayComments.bind(this);
-    }
-
-    displayComments() {
-        const comments = this.props.comments;
+    const displayComments = () => {
+        const comments = props.comments;
         return comments.map(comment => {
-            return <ul key={comment.id} onClick={e => this.setState({ postId: this.props.selectedPost })}>
-                <li id="comment">{comment.text}</li>
-            </ul>
+            return <ul key={comment.id} onClick={e => {
+                setPostId(props.selectedPost);
+                setComments(props.comments);
+            }}><li id="comment">{comment.text}</li></ul>
         });
     }
 
-    render() {
-        return (
-            <div className="comment-list">
-                {this.displayComments()}
-                <AddComment postId={this.state.postId}/>
-            </div>
-        );
-    }
+    return (
+        <div className="comment-list">
+            {displayComments()}
+            <AddComment postId={postId} comments={comments}/>
+        </div>
+    );
 }
 
 export default CommentList;

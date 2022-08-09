@@ -1,64 +1,50 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, getCommentsQuery, addCommentMutation } from "../../queries/queries";
 
-class AddComment extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            postId: "",
-            text: ""
-        }
-    }
+export const AddComment = props => {
+    const [allCommentValues, setAllCommentValues] = useState({
+        postId: 0,
+        commentTextFields: ""
+    });
 
-    displayPosts() {
-        const data = this.props.getPostsQuery;
-        if (data.loading) {
-            return (<option>Loading Posts...</option>)
-        } else {
-            return data.posts.map(post => {
-                return (<option key={post.id} value={post.id}>{post.text}</option>)
-            });
-        }
-    }
+    const handleChangedCommentValues = (e, id) => {
+        setAllCommentValues({
+            ...allCommentValues,
+            postId: id,
+            commentTextFields: e.target.value
+        });
+    };
 
-    bindCommentToPost(postId) {
-        const posts = this.props.getPostsQuery.posts;
-        return posts.filter(post => post.id === postId);
-    }
-
-    submitForm(e) {
-        e.preventDefault();
-        this.props.addCommentMutation({
+    const submitComment = e => {
+        props.addCommentMutation({
             variables: {
-                postId: this.state.postId,
-                text: this.state.text
+                postId: allCommentValues.postId,
+                text: allCommentValues.commentTextFields
             },
             refetchQueries: [{ query: getCommentsQuery }]
         });
-        e.target.reset();
-    }
+        setAllCommentValues({
+            ...allCommentValues,
+            postId: 0,
+            commentTextFields: ""
+        });
+    };
 
-    render() {
-        return (
-            <form id="add-comment" onSubmit={this.submitForm.bind(this)}>
-                <div className="field">
-                    <input 
-                        type="text"
-                        placeholder="comment"
-                        onChange={e => {
-                            this.setState({ text: e.target.value })
-                            this.bindCommentToPost(this.setState({ postId: this.props.postId }))
-                            this.displayPosts()
-                        }}
-                    />
-                </div>
+    return (
+        <form id="add-comment">
+            <input
+                type="text"
+                label="Text"
+                placeholder="comment"
+                value={allCommentValues.commentTextFields}
+                onChange={event => handleChangedCommentValues(event, props.postId)}
+            />
 
-                <button>+</button>
-            </form>
-        );
-    }
+            <button onClick={submitComment}>+</button>
+        </form>
+    );
 }
 
 export default flowright(

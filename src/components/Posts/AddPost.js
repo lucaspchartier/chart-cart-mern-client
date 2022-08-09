@@ -1,42 +1,36 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import { graphql } from "react-apollo";
 import flowright from "lodash.flowright";
 import { getPostsQuery, addPostMutation } from "../../queries/queries";
 
-class AddPost extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            text: ""
-        }
-    }
+export const AddPost = props => {
+    const [postTextFields, setPostTextFields] = useState("");
 
-    submitForm(e) {
-        e.preventDefault();
-        this.props.addPostMutation({
+    const handlePostTextInput = e => setPostTextFields(e.target.value);
+
+    const submitPost = e => {
+        props.addPostMutation({
             variables: {
-                text: this.state.text
+                text: postTextFields
             },
             refetchQueries: [{ query: getPostsQuery }]
         });
-        e.target.reset();
-    }
+        setPostTextFields("");
+    };
 
-    render() {
-        return (
-            <form id="add-post" onSubmit={this.submitForm.bind(this)}>
-                <div className="field">
-                    <input
-                        type="text"
-                        placeholder="post"
-                        onChange={e => this.setState({ text: e.target.value })}
-                    />
-                </div>
+    return (
+        <form id="add-post">
+            <input
+                type="text"
+                label="Text"
+                placeholder="post"
+                value={postTextFields}
+                onChange={handlePostTextInput}
+            />
 
-                <button>+</button>
-            </form>
-        );
-    }
+            <button onClick={submitPost}>+</button>
+        </form>
+    );
 }
 
 export default flowright(
