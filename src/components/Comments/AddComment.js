@@ -30,7 +30,6 @@ export const AddComment = props => {
             postId: 0,
             commentTextFields: ""
         });
-        props.displayComments();
     };
 
     return (
