@@ -18,7 +18,6 @@ export const AddComment = props => {
     };
 
     const submitComment = e => {
-        e.preventDefault();
         props.addCommentMutation({
             variables: {
                 postId: allCommentValues.postId,
