@@ -16,7 +16,6 @@ export const AddPost = props => {
             refetchQueries: [{ query: getPostsQuery }]
         });
         setPostTextFields("");
-        props.displayPosts();
     };
 
     return (
