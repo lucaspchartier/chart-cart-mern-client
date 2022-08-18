@@ -69,7 +69,12 @@ const addCommentMutation = gql`
 const deletePosttMutation = gql`
     mutation($id: ID!) {
         deletePost(id: $id) {
-
+            id
+            text
+            comments {
+                id
+                text
+            }
         }
     }
 `
