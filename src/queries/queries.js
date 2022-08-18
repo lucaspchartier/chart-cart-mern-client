@@ -66,7 +66,7 @@ const addCommentMutation = gql`
     }
 `
 
-const deletePosttMutation = gql`
+const deletePostMutation = gql`
     mutation($id: ID!) {
         deletePost(id: $id) {
             id
@@ -79,4 +79,4 @@ const deletePosttMutation = gql`
     }
 `
 
-export { getPostsQuery, getCommentsQuery, getPostQuery, getCommentQuery, addPostMutation, addCommentMutation };
+export { getPostsQuery, getCommentsQuery, getPostQuery, getCommentQuery, addPostMutation, addCommentMutation, deletePostMutation };
