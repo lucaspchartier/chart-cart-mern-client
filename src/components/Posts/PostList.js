@@ -5,6 +5,7 @@ import { graphql } from "react-apollo";
 import AddPost from "./AddPost";
 import CommentList from "../Comments/CommentList";
 import './PostList.css';
+import { getPostsQuery } from "../../queries/queries";
 
 // const getPostsQuery = gql`
 //     {
