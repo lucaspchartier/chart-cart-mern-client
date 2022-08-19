@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../queries/queries";
 
-export const PostDetails = () => {
+export const PostDetails = props => {
     const displayPostDetails = () => {
-        const { post } = this.props.data;
+        const { post } = props.data;
         if (post) {
             return (
                 <div>
