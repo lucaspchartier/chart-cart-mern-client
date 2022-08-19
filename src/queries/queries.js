@@ -5,6 +5,10 @@ const getPostsQuery = gql`
         posts {
             id
             text
+            comments {
+                id
+                text
+            }
         }
     }
 `

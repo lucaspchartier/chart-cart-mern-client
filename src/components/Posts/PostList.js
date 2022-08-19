@@ -1,23 +1,10 @@
 import { useState } from "react";
-import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
 import AddPost from "./AddPost";
 import CommentList from "../Comments/CommentList";
 import './PostList.css';
-
-const getPostsQuery = gql`
-    {
-        posts {
-            id
-            text
-            comments {
-                id
-                text
-            }
-        }
-    }
-`;
+import { getPostsQuery } from "../../queries/queries";
 
 export const PostList = props => {
     const [selectedPost, setSelectedPost] = useState(0);
