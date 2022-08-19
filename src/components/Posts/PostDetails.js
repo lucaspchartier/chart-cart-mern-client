@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import { getPostQuery } from "../queries/queries";
 
 export const PostDetails = () => {
-    displayPostDetails() {
+    const displayPostDetails = () => {
         const { post } = this.props.data;
         if (post) {
             return (
@@ -20,7 +20,7 @@ export const PostDetails = () => {
     render() {
         return (
             <div id="post-detail">
-                {this.displayPostDetails()}
+                {displayPostDetails()}
             </div>
         );
     }
