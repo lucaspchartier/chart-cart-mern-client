@@ -17,13 +17,11 @@ export const PostDetails = () => {
         }
     }
 
-    render() {
-        return (
-            <div id="post-detail">
-                {displayPostDetails()}
-            </div>
-        );
-    }
+    return (
+        <div id="post-detail">
+            {displayPostDetails()}
+        </div>
+    );
 }
 
 export default graphql(getPostQuery, {
