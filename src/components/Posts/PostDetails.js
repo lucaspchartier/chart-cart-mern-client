@@ -1,5 +1,5 @@
 import { graphql } from "react-apollo";
-import { getPostQuery } from "../queries/queries";
+import { getPostQuery } from "../../queries/queries";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
