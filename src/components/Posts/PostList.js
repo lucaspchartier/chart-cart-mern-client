@@ -8,8 +8,8 @@ import './PostList.css';
 import { getPostsQuery } from "../../queries/queries";
 
 export const PostList = props => {
+    const [post, setPost] = useState({});
     const [postId, setPostId] = useState(0);
-    const [postText, setPostText] = useState("");
     const [comments, setComments] = useState([]);
 
     const displayPosts = () => {
