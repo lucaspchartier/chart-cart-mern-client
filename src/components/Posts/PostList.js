@@ -19,8 +19,8 @@ export const PostList = props => {
         } else {
             return data.posts.map(post => {
                 return <div key={post.id} onClick={e => {
+                    setPost(post)
                     setPostId(post.id)
-                    setPostText(post.text)
                     setComments(post.comments)
                 }}>{post.text}</div>
             });
