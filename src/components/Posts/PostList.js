@@ -9,6 +9,7 @@ import { getPostsQuery } from "../../queries/queries";
 
 export const PostList = props => {
     const [postId, setPostId] = useState(0);
+    const [postText, setPostText] = useState("");
     const [comments, setComments] = useState([]);
 
     const displayPosts = () => {
