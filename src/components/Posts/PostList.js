@@ -20,6 +20,7 @@ export const PostList = props => {
             return data.posts.map(post => {
                 return <div key={post.id} onClick={e => {
                     setPostId(post.id)
+                    setPostText(post.text)
                     setComments(post.comments)
                 }}>{post.text}</div>
             });
