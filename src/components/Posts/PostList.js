@@ -18,7 +18,7 @@ export const PostList = props => {
         } else {
             return data.posts.map(post => {
                 return <div key={post.id} onClick={e => {
-                    setSelectedPost(post.id)
+                    setPostId(post.id)
                     setComments(post.comments)
                 }}>{post.text}</div>
             });
@@ -30,7 +30,7 @@ export const PostList = props => {
             {displayPosts()}
             <AddPost/>
             <PostDetails selectedPost={selectedPost}/>
-            <CommentList selectedPost={selectedPost} comments={comments}/>
+            <CommentList postId={postId} comments={comments}/>
         </div>
     );
 }
