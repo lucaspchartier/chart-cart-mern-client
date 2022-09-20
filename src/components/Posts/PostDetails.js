@@ -3,8 +3,7 @@ import { getPostQuery } from "../../queries/queries";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
-        console.log(props);
-        const { post } = props.data;
+        const { post } = props.post;
         if (post) {
             return (
                 <div>
@@ -26,6 +25,7 @@ export const PostDetails = props => {
 
 export default graphql(getPostQuery, {
     options: props => {
+        // console.log("This is props", props);
         return {
             variables: {
                 id: props.postId
