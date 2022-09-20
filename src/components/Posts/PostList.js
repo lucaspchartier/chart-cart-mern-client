@@ -9,7 +9,7 @@ import { getPostsQuery } from "../../queries/queries";
 
 export const PostList = props => {
     const [post, setPost] = useState({
-        postId: 0,
+        id: 0,
         text: "",
         comments: []
     });
