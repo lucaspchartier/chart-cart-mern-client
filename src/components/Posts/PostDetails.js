@@ -8,7 +8,7 @@ export const PostDetails = props => {
             return (
                 <div>
                     <h2>{post.text}</h2>
-                    <ul>{post.comments.map(comment => comment.text)}</ul>
+                    <h2>{post.comments.map(comment => comment.text)}</h2>
                 </div>
             )
         } else {
