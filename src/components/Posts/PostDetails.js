@@ -3,7 +3,7 @@ import { getPostQuery } from "../../queries/queries";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
-        const { post } = props.post;
+        const post = props.post;
         if (post) {
             return (
                 <div>
