@@ -21,7 +21,7 @@ export const PostList = props => {
         } else {
             return data.posts.map(post => {
                 return <div key={post.id} onClick={e => setPost({
-                    postId: post.id,
+                    id: post.id,
                     text: post.text,
                     comments: post.comments
                 })}>{post.text}</div>
@@ -34,7 +34,7 @@ export const PostList = props => {
             {displayPosts()}
             <AddPost/>
             <PostDetails post={post}/>
-            <CommentList postId={postId} comments={comments}/>
+            <CommentList postId={post.id} comments={post.comments}/>
         </div>
     );
 }
