@@ -25,10 +25,9 @@ export const PostDetails = props => {
 
 export default graphql(getPostQuery, {
     options: props => {
-        // console.log("This is props", props);
         return {
             variables: {
-                id: props.postId
+                id: props.id
             }
         }
     }
