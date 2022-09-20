@@ -8,7 +8,7 @@ export const PostDetails = props => {
             return (
                 <div>
                     <h2>{post.text}</h2>
-                    <h2>{post.comment.text}</h2>
+                    <h2>{post.comments}</h2>
                 </div>
             )
         } else {
