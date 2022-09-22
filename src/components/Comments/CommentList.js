@@ -11,7 +11,7 @@ export const CommentList = props => {
         const comments = props.comments;
         return comments.map(comment => {
             return <ul key={comment.id} onClick={e => {
-                setPostId(props.postId);
+                setPostId(props.id);
                 setComments(props.comments);
             }}><li id="comment">{comment.text}</li></ul>
         });
