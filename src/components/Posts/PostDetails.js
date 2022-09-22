@@ -7,7 +7,6 @@ export const PostDetails = props => {
         if (post) {
             return (
                 <div>
-                    <h2>{post.text}</h2>
                     <h2>{post.comments.map(comment => {
                         return <ul key={comment.id}>{comment.text}</ul>
                     })}</h2>
