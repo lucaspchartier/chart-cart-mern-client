@@ -31,8 +31,8 @@ export const PostList = props => {
         <div className="post-list">
             {displayPosts()}
             <AddPost/>
-            <PostDetails post={post}/>
-            <CommentList id={post.id} comments={post.comments}/>
+            <PostDetails id={id} text={text} comments={comments}/>
+            <CommentList id={id} comments={comments}/>
         </div>
     );
 }
