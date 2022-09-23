@@ -3,12 +3,10 @@ import { getPostQuery } from "../../queries/queries";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
-        const postId = props.id;
-        const postText = props.text;
         const postComments = props.comments;
-        if (post) {
+        if (props.data) {
             return (
-                <div>{post.comments.map(comment => {
+                <div>{postComments.map(comment => {
                         return <ul key={comment.id}>{comment.text}</ul>
                 })}</div>
             )
