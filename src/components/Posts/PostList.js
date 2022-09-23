@@ -18,11 +18,11 @@ export const PostList = props => {
             return (<div>Loading...</div>);
         } else {
             return data.posts.map(post => {
-                return <div key={post.id} onClick={e => setPost({
-                    id: post.id,
-                    text: post.text,
-                    comments: post.comments
-                })}>{post.text}</div>
+                return <div key={post.id} onClick={e => {
+                    setId(post.id);
+                    setText(post.text);
+                    setComments(post.comments);
+                }}>{post.text}</div>
             });
         }
     };
