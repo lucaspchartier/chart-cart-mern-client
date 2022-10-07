@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../../queries/queries";
 
