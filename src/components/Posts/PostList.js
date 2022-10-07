@@ -24,7 +24,7 @@ export const PostList = props => {
                     id: post.id,
                     text: post.text,
                     comments: post.comments
-                })}>{text}</div>
+                })}>{post.text}</div>
             });
         }
     };
@@ -33,8 +33,8 @@ export const PostList = props => {
         <div className="post-list">
             {displayPosts()}
             <AddPost/>
-            <PostDetails id={id} comments={comments}/>
-            <CommentList id={id} comments={comments}/>
+            <PostDetails id={post.id} comments={post.comments}/>
+            <CommentList id={post.id} comments={post.comments}/>
         </div>
     );
 }
