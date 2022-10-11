@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../../queries/queries";
 
 export const PostDetails = props => {
-    const [selected, setSelected] = useState(null);
-
     const displayPostDetails = () => {
         const postComments = props.comments;
         if (props.data) {
