@@ -33,7 +33,7 @@ export const PostList = props => {
         <div className="post-list">
             {displayPosts()}
             <AddPost/>
-            <PostDetails id={post.id} comments={post.comments}/>
+            <PostDetails post={post}/>
             <CommentList id={post.id} comments={post.comments}/>
         </div>
     );
