@@ -14,9 +14,7 @@ export const PostList = props => {
         if (data.loading) {
             return (<div>Loading...</div>);
         } else {
-            return data.posts.map(post => {
-                return <div key={post.id} onClick={e => setSelectedPost(post.id)}>{post.text}</div>
-            });
+            return data.posts.map(post => <div key={post.id} onClick={e => setSelectedPost(post.id)}>{post.text}</div>);
         }
     };
 
