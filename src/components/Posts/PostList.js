@@ -24,7 +24,7 @@ export const PostList = props => {
         <div className="post-list">
             {displayPosts()}
             <AddPost/>
-            <PostDetails post={post}/>
+            <PostDetails selectedPost={selectedPost}/>
         </div>
     );
 }
