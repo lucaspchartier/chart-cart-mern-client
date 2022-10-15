@@ -3,7 +3,6 @@ import { graphql } from "react-apollo";
 
 import AddPost from "./AddPost";
 import PostDetails from "./PostDetails";
-import CommentList from "../Comments/CommentList";
 import './PostList.css';
 import { getPostsQuery } from "../../queries/queries";
 
@@ -34,7 +33,6 @@ export const PostList = props => {
             {displayPosts()}
             <AddPost/>
             <PostDetails post={post}/>
-            <CommentList id={post.id} comments={post.comments}/>
         </div>
     );
 }
