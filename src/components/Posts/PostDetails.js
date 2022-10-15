@@ -1,6 +1,8 @@
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../../queries/queries";
 
+import CommentList from "../Comments/CommentList";
+
 export const PostDetails = props => {
     const displayPostDetails = () => {
         const postComments = props.comments;
