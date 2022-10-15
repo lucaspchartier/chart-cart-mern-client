@@ -7,11 +7,7 @@ import './PostList.css';
 import { getPostsQuery } from "../../queries/queries";
 
 export const PostList = props => {
-    const [post, setPost] = useState({
-        id: 0,
-        text: "",
-        comments: []
-    });
+    const [selectedPost, setSelectedPost] = useState(null);
 
     const displayPosts = () => {
         const data = props.data;
@@ -19,11 +15,7 @@ export const PostList = props => {
             return (<div>Loading...</div>);
         } else {
             return data.posts.map(post => {
-                return <div key={post.id} onClick={e => setPost({
-                    id: post.id,
-                    text: post.text,
-                    comments: post.comments
-                })}>{post.text}</div>
+                return <div key={post.id} onClick={e => setSelectedPost(post.id)}>{post.text}</div>
             });
         }
     };
