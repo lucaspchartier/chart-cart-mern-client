@@ -5,16 +5,16 @@ import CommentList from "../Comments/CommentList";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
-        const postComments = props.comments;
-        if (props.data) {
-            return (
-                <div>{postComments.map(comment => {
-                        return <ul key={comment.id}>{comment.text}</ul>
-                })}</div>
-            )
-        } else {
-            <div>No post selected.</div>
-        }
+        // const postComments = props.comments;
+        // if (props.data) {
+        //     return (
+        //         <div>{postComments.map(comment => {
+        //                 return <ul key={comment.id}>{comment.text}</ul>
+        //         })}</div>
+        //     )
+        // } else {
+        //     <div>No post selected.</div>
+        // }
     }
 
     return (
@@ -28,7 +28,7 @@ export default graphql(getPostQuery, {
     options: props => {
         return {
             variables: {
-                id: props.id
+                id: props.selectedPost
             }
         }
     }
