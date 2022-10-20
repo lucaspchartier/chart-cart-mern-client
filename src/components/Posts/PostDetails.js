@@ -5,6 +5,7 @@ import CommentList from "../Comments/CommentList";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
+        const { post } = props.data;
         // const postComments = props.comments;
         // if (props.data) {
         //     return (
