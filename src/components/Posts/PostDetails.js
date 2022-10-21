@@ -7,10 +7,7 @@ export const PostDetails = props => {
     const { post } = props.data;
     const displayPostDetails = () => {
         if (post) {
-            return post.comments.map(comment => {
-                console.log(comment);
-            return <ul key={comment.id}>{comment.text}</ul>
-        });
+            return post.comments.map(comment => <ul key={comment.id}>{comment.text}</ul>);
         } else {
             return <h6>No post selected...</h6>
         }
