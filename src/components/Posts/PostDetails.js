@@ -19,6 +19,7 @@ export const PostDetails = props => {
     return (
         <div id="post-detail">
             {displayPostDetails()}
+            <AddComment/>
         </div>
     );
 }
