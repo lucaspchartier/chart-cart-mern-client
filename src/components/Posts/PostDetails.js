@@ -1,13 +1,16 @@
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../../queries/queries";
 
-import AddCommment from "../Comments/AddComment";
+import AddComment from "../Comments/AddComment";
 
 export const PostDetails = props => {
     const displayPostDetails = () => {
         const { post } = props.data;
         if (post) {
-            return post.comments.map(comment => <ul key={comment.id}>{comment.text}</ul>);
+            return post.comments.map(comment => {
+                console.log(comment);
+            return <ul key={comment.id}>{comment.text}</ul>
+        });
         } else {
             return <h6>No post selected...</h6>
         }
