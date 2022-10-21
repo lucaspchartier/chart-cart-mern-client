@@ -6,16 +6,7 @@ import CommentList from "../Comments/CommentList";
 export const PostDetails = props => {
     const displayPostDetails = () => {
         const { post } = props.data;
-        // const postComments = props.comments;
-        // if (props.data) {
-        //     return (
-        //         <div>{postComments.map(comment => {
-        //                 return <ul key={comment.id}>{comment.text}</ul>
-        //         })}</div>
-        //     )
-        // } else {
-        //     <div>No post selected.</div>
-        // }
+        
     }
 
     return (
