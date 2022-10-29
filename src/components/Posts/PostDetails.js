@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../../queries/queries";
 
 import AddComment from "../Comments/AddComment";
 
-export const PostDetails = props => {
+export const PostDetails = props => {    
     const { post } = props.data;
     const displayPostDetails = () => {
         if (post) {
@@ -16,7 +17,7 @@ export const PostDetails = props => {
     return (
         <div id="post-detail">
             {displayPostDetails()}
-            <AddComment/>
+            <AddComment postId={post.id}/>
         </div>
     );
 }
