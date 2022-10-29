@@ -4,7 +4,9 @@ import { getPostQuery } from "../../queries/queries";
 
 import AddComment from "../Comments/AddComment";
 
-export const PostDetails = props => {    
+export const PostDetails = props => {  
+    const [postId, selectedPostId] = useState(null);
+    
     const { post } = props.data;
     const displayPostDetails = () => {
         if (post) {
