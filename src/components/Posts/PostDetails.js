@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { graphql } from "react-apollo";
 import { getPostQuery } from "../../queries/queries";
 
 import AddComment from "../Comments/AddComment";
 
 export const PostDetails = props => {  
-    const [postId, setPostId] = useState(null);
-    
     const { post } = props.data;
     const displayPostDetails = () => {
         if (!post) {
